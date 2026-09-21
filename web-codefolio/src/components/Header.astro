@@ -1,0 +1,93 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import type { Lang } from "../i18n/ui";
+import { t } from "../i18n/ui";
+import { localizePath } from "../i18n/utils";
+
+interface HeaderProps {
+  title: string;
+  lang: Lang;
+}
+
+const { title, lang } = Astro.props as HeaderProps;
+const currentPath = Astro.url.pathname;
+const stripped = currentPath.replace(/^\/en(?=\/|$)/, "") || "/";
+const origin = Astro.site ? Astro.site.origin : "";
+---
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>{title}</title>
+  <meta name="description" content={t(lang, "meta.description")} />
+  <meta content={title} property="og:title" />
+  <meta content={title} property="twitter:title" />
+  <meta content={t(lang, "meta.description")} property="og:description" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="canonical" href={`${origin}${stripped}`} />
+  <link rel="alternate" hreflang="es" href={`${origin}${localizePath(stripped, "es")}`} />
+  <link rel="alternate" hreflang="en" href={`${origin}${localizePath(stripped, "en")}`} />
+  <link rel="alternate" hreflang="x-default" href={`${origin}${localizePath(stripped, "es")}`} />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <ViewTransitions />
+  <link href="https://fonts.googleapis.com/" rel="preconnect" />
+  <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous" />
+  <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+  <script is:inline>
+    !(function (o, c) {
+      var n = c.documentElement,
+        t = " w-mod-";
+      (n.className += t + "js"),
+        ("ontouchstart" in o || (o.DocumentTouch && c instanceof DocumentTouch)) &&
+          (n.className += t + "touch");
+    })(window, document);
+  </script>
+  <script is:inline>
+    (function () {
+      try {
+        var path = window.location.pathname;
+        var isEn = path === "/en" || path.indexOf("/en/") === 0;
+        var stored = localStorage.getItem("lang");
+        var pref;
+        if (stored === "en" || stored === "es") {
+          pref = stored;
+        } else {
+          var nav = (navigator.language || navigator.userLanguage || "es").toLowerCase();
+          pref = nav.indexOf("en") === 0 ? "en" : "es";
+        }
+        var target = null;
+        if (pref === "en" && !isEn) {
+          target = "/en" + (path === "/" ? "/" : path);
+        } else if (pref === "es" && isEn) {
+          target = path.replace(/^\/en/, "") || "/";
+        }
+        if (target && target !== path) {
+          window.location.replace(target);
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script is:inline>
+    document.addEventListener("click", function (event) {
+      var el = event.target && event.target.closest ? event.target.closest("[data-lang-toggle]") : null;
+      if (!el) return;
+      try {
+        localStorage.setItem("lang", el.getAttribute("data-lang-toggle"));
+      } catch (e) {}
+    });
+  </script>
+  <script is:inline>
+    // Email protection: assemble the mailto only on click.
+    document.addEventListener("click", function (event) {
+      var el =
+        event.target && event.target.closest
+          ? event.target.closest("[data-email]")
+          : null;
+      if (!el) return;
+      event.preventDefault();
+      try {
+        var address = atob(el.getAttribute("data-email"));
+        window.location.href = "mailto:" + address;
+      } catch (e) {}
+    });
+  </script>
+</head>

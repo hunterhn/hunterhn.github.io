@@ -1,0 +1,38 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { hobbies } from "../data/content";
+import type { Lang } from "../i18n/ui";
+import { t } from "../i18n/ui";
+import { localizePath } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props as Props;
+const title = `${t(lang, "section.hobbies")} | Dennis García`;
+---
+
+<PageLayout lang={lang} selectedItem="hobbies" title={title}>
+  <div class="back-nav-container">
+    <a href={localizePath("/", lang)} class="back-nav-button w-inline-block">
+      <img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+      <div>{t(lang, "back")}</div>
+    </a>
+  </div>
+
+  <div class="content-container">
+    <h1>{t(lang, "section.hobbies")}</h1>
+    <p class="category-intro">{t(lang, "hobbies.intro")}</p>
+    <div class="hobby-grid">
+      {
+        hobbies.map((hobby) => (
+          <article class="hobby-card">
+            <h4>{hobby.title[lang]}</h4>
+            <p>{hobby.desc[lang]}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</PageLayout>

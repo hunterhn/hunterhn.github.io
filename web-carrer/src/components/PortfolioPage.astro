@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from './nav.astro';
+import Home from './home.astro';
+import Career from './career.astro';
+import Projects from './projects.astro';
+import Tech from './tech.astro';
+import Hobbies from './hobbies.astro';
+import Psychology from './psychology.astro';
+import Contact from './contact.astro';
+import Footer from './footer.astro';
+import type { Lang } from '../i18n/ui';
+import { t } from '../i18n/ui';
+import { SITE, getSocials } from '../data/site';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props as Props;
+const socials = getSocials(lang);
+---
+
+<Layout
+  title={t(lang, 'meta.title')}
+  description={t(lang, 'meta.description')}
+  keywords="Dennis García, DevOps, Cloud, GCP, AWS, software, security, AI, psychology, Panama"
+  siteUrl={SITE.siteUrl}
+  lang={lang}
+  personName={SITE.name}
+  jobTitle={t(lang, 'role')}
+  socials={socials}
+  ogImageUrl="/placeholder.jpeg"
+>
+  <Nav lang={lang} />
+  <Home lang={lang} />
+  <Career lang={lang} />
+  <Projects lang={lang} />
+  <Tech lang={lang} />
+  <Hobbies lang={lang} />
+  <Psychology lang={lang} />
+  <Contact lang={lang} />
+  <Footer lang={lang} />
+</Layout>

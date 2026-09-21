@@ -1,0 +1,31 @@
+---
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+import type { Lang } from "../i18n/ui";
+import "../styles/styles.css";
+
+interface Props {
+  lang: Lang;
+  selectedItem: string;
+  title: string;
+}
+
+const { lang, selectedItem, title } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <Header title={title} lang={lang} />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem={selectedItem} lang={lang} />
+      <nav class="main">
+        <div class="container">
+          <slot />
+        </div>
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>

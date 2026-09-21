@@ -1,0 +1,28 @@
+---
+import CategoryPage from "../../components/CategoryPage.astro";
+import ExperiencePage from "../../components/ExperiencePage.astro";
+import EducationPage from "../../components/EducationPage.astro";
+import HobbiesPage from "../../components/HobbiesPage.astro";
+import PsychologyPage from "../../components/PsychologyPage.astro";
+import { categories } from "../../data/content";
+
+export function getStaticPaths() {
+  const pages = [
+    ...categories.map((category) => category.key),
+    "experience",
+    "education",
+    "hobbies",
+    "psychology",
+  ];
+  return pages.map((page) => ({ params: { page } }));
+}
+
+const { page } = Astro.params;
+const isCategory = categories.some((category) => category.key === page);
+---
+
+{page === "experience" && <ExperiencePage lang="en" />}
+{page === "education" && <EducationPage lang="en" />}
+{page === "hobbies" && <HobbiesPage lang="en" />}
+{page === "psychology" && <PsychologyPage lang="en" />}
+{isCategory && <CategoryPage lang="en" page={page!} />}

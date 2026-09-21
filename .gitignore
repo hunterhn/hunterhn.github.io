@@ -1,0 +1,8 @@
+# personal data (private)
+profile/
+
+# build exports (generated)
+exported/
+
+# OS files
+.DS_Store

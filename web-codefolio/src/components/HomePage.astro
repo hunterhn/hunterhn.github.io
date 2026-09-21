@@ -1,0 +1,129 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { categories, navItems, contact } from "../data/content";
+import type { Lang } from "../i18n/ui";
+import { t } from "../i18n/ui";
+import { localizePath } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props as Props;
+
+const iconFor = (key: string) => navItems.find((item) => item.key === key)!.icon;
+const sortedCategories = [...categories].sort((a, b) => a.order - b.order);
+
+const extraCards = [
+  {
+    key: "experience",
+    icon: iconFor("experience"),
+    title: { es: "Experiencia", en: "Experience" },
+    summary: {
+      es: "19 años de trayectoria técnica verificable: desarrollo, administración de sistemas, bases de datos, redes, seguridad, automatización y agentic AI.",
+      en: "19 years of verifiable technical track record: development, systems administration, databases, networking, security, automation and agentic AI.",
+    },
+    chips: ["19 years", "DevOps", "Cloud", "Security", "Data"],
+  },
+  {
+    key: "education",
+    icon: iconFor("education"),
+    title: { es: "Formación", en: "Education" },
+    summary: {
+      es: "Títulos y certificaciones en sistemas, seguridad de la información y docencia.",
+      en: "Degrees and certifications in systems, information security and teaching.",
+    },
+    chips: ["MTech", "B.Sc.", "Security", "Teaching"],
+  },
+  {
+    key: "hobbies",
+    icon: iconFor("hobbies"),
+    title: { es: "Aficiones", en: "Hobbies" },
+    summary: {
+      es: "Fotografía, senderismo, tecnología creativa, naturaleza y viajes.",
+      en: "Photography, hiking, creative tech, nature and travel.",
+    },
+    chips: ["Photography", "Hiking", "Creative Tech", "Nature"],
+  },
+  {
+    key: "psychology",
+    icon: iconFor("psychology"),
+    title: { es: "Psicología", en: "Psychology" },
+    summary: {
+      es: "Formación clínica, educativa y organizacional. Investigación y proyectos académicos.",
+      en: "Clinical, educational and organizational training. Research and academic projects.",
+    },
+    chips: ["Evidence-based", "CBT / ACT", "Assessment", "Research"],
+  },
+];
+
+const cards = [...sortedCategories, ...extraCards];
+
+const contactLinks: { label: string; href: string; emailB64?: string }[] = [
+  { label: "garcia.dennis [at] gmail [dot] com", href: "#", emailB64: "Z2FyY2lhLmRlbm5pc0BnbWFpbC5jb20=" },
+  { label: "GitHub", href: contact.github },
+  { label: "LinkedIn", href: contact.linkedin },
+  { label: "Wikimedia Commons", href: contact.commons },
+  { label: "dennisgarcia.dev", href: contact.website },
+];
+---
+
+<PageLayout lang={lang} selectedItem="home" title={t(lang, "meta.title")}>
+  <main class="fold-content-container">
+    <div class="fold-content">
+      <h1>{t(lang, "home.title1")}<br />{t(lang, "home.title2")}</h1>
+      <p class="lead">{t(lang, "home.lead")}</p>
+    </div>
+    <a href="#contact" class="button w-button">{t(lang, "contact")}</a>
+  </main>
+
+  <div class="projects-section">
+    {
+      cards.map((card) => (
+        <a href={localizePath(`/${card.key}`, lang)} class="projects-container">
+          <div class="single-projects-category">
+            <div class="projects-category-image-container">
+              <img
+                src={`/assets/${card.icon}`}
+                loading="lazy"
+                alt=""
+                class="projects-category-image"
+              />
+            </div>
+          </div>
+          <div class="single-projects-content">
+            <h4>{card.title[lang]}</h4>
+            <p class="card-summary">{card.summary[lang]}</p>
+            <div class="tech-tools-container">
+              <div class="mini-label-white gray-color">{t(lang, "techLabel")}</div>
+              <div class="chips-container chips-container-small-width">
+                {card.chips.map((chip) => (
+                  <div class="single-chip small-chip">{chip}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+
+  <section class="section" id="contact">
+    <h2 class="section-title">{t(lang, "section.contact")}</h2>
+    <div class="contact-links">
+      {
+        contactLinks.map((link) => (
+          <a
+            href={link.emailB64 ? "#" : link.href}
+            data-email={link.emailB64}
+            class="contact-link"
+            target={link.emailB64 ? undefined : "_blank"}
+            rel={link.emailB64 ? undefined : "noopener noreferrer"}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</PageLayout>

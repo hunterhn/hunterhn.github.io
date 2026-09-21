@@ -1,0 +1,54 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import Project from "./Project.astro";
+import { categories } from "../data/content";
+import type { Lang } from "../i18n/ui";
+import { t } from "../i18n/ui";
+import { localizePath } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+  page: string;
+}
+
+const { lang, page } = Astro.props as Props;
+const category = categories.find((item) => item.key === page);
+
+if (!category) {
+  throw new Error(`Unknown category: ${page}`);
+}
+
+const title = `${category.title[lang]} | Dennis García`;
+---
+
+<PageLayout lang={lang} selectedItem={category.key} title={title}>
+  <div class="back-nav-container">
+    <a href={localizePath("/", lang)} class="back-nav-button w-inline-block">
+      <img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+      <div>{t(lang, "back")}</div>
+    </a>
+  </div>
+  <div class="content-container">
+    <h1>{category.title[lang]}</h1>
+    <p class="category-intro">{category.intro[lang]}</p>
+    <div class="mini-label-white gray-color">{t(lang, "techLabel")}</div>
+    <div class="chips-container">
+      {category.chips.map((chip) => <div class="single-chip">{chip}</div>)}
+    </div>
+    <section class="items-container">
+      <div class="resouce-items">
+        {
+          category.projects.map((project) => (
+            <Project
+              title={project.title[lang]}
+              desc={project.desc[lang]}
+              tech={project.tech}
+              techLabel={t(lang, "techLabel")}
+              link={project.link}
+            />
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</PageLayout>

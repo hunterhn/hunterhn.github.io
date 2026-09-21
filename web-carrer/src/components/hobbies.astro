@@ -1,0 +1,80 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { Lang } from '../i18n/ui';
+import { t } from '../i18n/ui';
+import { hobbies } from '../data/portfolio';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props as Props;
+
+const icons = [
+  'mdi:flask-outline',
+  'mdi:camera-outline',
+  'mdi:paw-outline',
+  'mdi:hiking',
+  'mdi:vector-polyline',
+  'mdi:airplane',
+  'mdi:bottle-tonic-outline',
+];
+---
+
+<section id="hobbies" class="section-container">
+  <div class="container mx-auto">
+    <div class="mb-12 hobby-header">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4">
+        <span class="text-accent">/</span> {t(lang, 'section.hobbies')}
+      </h2>
+      <p class="text-subtext font-body text-sm max-w-xl">{t(lang, 'hobbies.subtitle')}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        hobbies.map((hobby, index) => (
+          <article class="hobby-card opacity-0 group p-6 bg-accent/5 border border-accent/10 rounded-2xl hover:border-accent/40 hover:bg-accent/10 transition-all duration-300">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-accent/15 text-accent group-hover:scale-110 transition-transform">
+                <Icon name={icons[index % icons.length]} class="w-5 h-5" />
+              </span>
+              <h3 class="text-lg font-heading font-bold text-maintext">{hobby.title[lang]}</h3>
+            </div>
+            <p class="text-subtext text-sm font-body leading-relaxed">{hobby.desc[lang]}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .hobby-header { opacity: 0; transform: translateY(20px); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+  .hobby-card { transform: translateY(20px) scale(0.95); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+  .hobby-header.reveal, .hobby-card.reveal { opacity: 1 !important; transform: translateY(0) scale(1); }
+</style>
+
+<script>
+  function revealHobbies() {
+    const header = document.querySelector('.hobby-header');
+    const cards = document.querySelectorAll('.hobby-card');
+    const map = new Map<Element, number>();
+    cards.forEach((c, i) => map.set(c, i));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const target = entry.target;
+        if (target.classList.contains('hobby-card')) {
+          const index = map.get(target) ?? 0;
+          setTimeout(() => target.classList.add('reveal'), (index % 3) * 120);
+          observer.unobserve(target);
+        } else {
+          target.classList.add('reveal');
+          observer.unobserve(target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -10px 0px' });
+    if (header) observer.observe(header);
+    cards.forEach((card) => observer.observe(card));
+  }
+  revealHobbies();
+  document.addEventListener('astro:after-swap', revealHobbies);
+</script>

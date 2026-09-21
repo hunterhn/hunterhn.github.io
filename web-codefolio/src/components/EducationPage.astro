@@ -1,0 +1,97 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import {
+  education,
+  complementaryEducation,
+  certifications,
+  languages,
+} from "../data/content";
+import type { Lang } from "../i18n/ui";
+import { t } from "../i18n/ui";
+import { localizePath } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props as Props;
+const title = `${t(lang, "section.education")} | Dennis García`;
+---
+
+<PageLayout lang={lang} selectedItem="education" title={title}>
+  <div class="back-nav-container">
+    <a href={localizePath("/", lang)} class="back-nav-button w-inline-block">
+      <img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+      <div>{t(lang, "back")}</div>
+    </a>
+  </div>
+
+  <div class="content-container">
+    <h1>{t(lang, "section.education")}</h1>
+    <div class="edu-grid">
+      {
+        education.map((item) => (
+          <article class="edu-card">
+            <h4>{item.title[lang]}</h4>
+            <div class="edu-inst">
+              {item.institution}
+              {item.location ? ` · ${item.location[lang]}` : ""}
+            </div>
+            <div class="edu-period">{item.period}</div>
+            {item.detail && <p class="edu-detail">{item.detail[lang]}</p>}
+          </article>
+        ))
+      }
+    </div>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, "section.complementary")}</h2>
+    <div class="edu-grid">
+      {
+        complementaryEducation.map((item) => (
+          <article class="edu-card">
+            <h4>{item.title[lang]}</h4>
+            <div class="edu-inst">
+              {item.institution}
+              {item.location ? ` · ${item.location[lang]}` : ""}
+            </div>
+            <div class="edu-period">{item.period}</div>
+            {item.detail && <p class="edu-detail">{item.detail[lang]}</p>}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, "section.certifications")}</h2>
+    <div class="cert-list">
+      {
+        certifications.map((cert) => (
+          <div class="cert-item">
+            <div class="cert-name">{cert.name}</div>
+            <div class="cert-issuer">
+              {cert.issuer}
+              {cert.year ? ` · ${cert.year}` : ""}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, "section.languages")}</h2>
+    <div class="cert-list">
+      {
+        languages.map((item) => (
+          <div class="cert-item">
+            <div class="cert-name">{item.name[lang]}</div>
+            <div class="cert-issuer">{item.level[lang]}</div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</PageLayout>

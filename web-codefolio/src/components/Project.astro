@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  desc: string[];
+  tech: string[];
+  techLabel: string;
+  link?: string;
+}
+
+const { title, desc, tech, techLabel, link } = Astro.props as Props;
+---
+
+<div class="single-item">
+  <h3>{title}</h3>
+  <div class="project-desc project-desc-list w-richtext">
+    <ul role="list">
+      {desc.map((item) => <li>{item}</li>)}
+    </ul>
+  </div>
+  {
+    link && (
+      <a href={link} class="project-link" target="_blank" rel="noopener noreferrer">
+        {link.replace(/^https?:\/\//, "")}
+      </a>
+    )
+  }
+  <div class="mini-label-white">{techLabel}</div>
+  <div class="chips-container">
+    {tech.map((techItem) => <div class="single-chip">{techItem}</div>)}
+  </div>
+</div>

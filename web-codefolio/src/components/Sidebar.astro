@@ -1,0 +1,107 @@
+---
+import { profile, navItems } from "../data/content";
+import type { Lang } from "../i18n/ui";
+import { t } from "../i18n/ui";
+import { localizePath, switchLangPath } from "../i18n/utils";
+
+interface Props {
+  selectedItem: string;
+  lang: Lang;
+}
+
+const { selectedItem, lang } = Astro.props as Props;
+const altLang: Lang = lang === "es" ? "en" : "es";
+const altPath = switchLangPath(Astro.url.pathname, altLang);
+---
+
+<aside
+  data-animation="default"
+  data-collapse="medium"
+  data-duration="400"
+  data-easing="ease"
+  data-easing2="ease"
+  role="banner"
+  class="sidebar w-nav"
+>
+  <div class="nav-content">
+    <a href={localizePath("/", lang)} class="w-nav-brand" aria-label="home">
+      <div class="niv-data">
+        <img
+          src="/assets/avatar.svg"
+          loading="eager"
+          alt={`${profile.name} avatar`}
+          class="niv-image"
+        />
+        <div>
+          <div class="label-white">{profile.name}</div>
+          <div class="label-gray">{profile.role[lang]}</div>
+        </div>
+      </div>
+    </a>
+
+    <nav role="navigation" class="w-nav-menu">
+      {
+        navItems.map((item) => (
+          <a
+            href={localizePath(item.key === "home" ? "/" : `/${item.key}`, lang)}
+            class={`nav-link-container w-inline-block ${
+              selectedItem === item.key ? "w--current" : ""
+            }`}
+            aria-current={selectedItem === item.key ? "page" : undefined}
+          >
+            <img
+              src={`/assets/${item.icon}`}
+              loading="eager"
+              alt=""
+              class="nav-link-image"
+            />
+            <div>{item.label[lang]}</div>
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="sidebar-footer">
+      <a
+        href={altPath}
+        class="lang-switch"
+        data-lang-toggle={altLang}
+        title={t(lang, "langSwitchLabel")}
+        aria-label={t(lang, "langSwitchLabel")}
+        rel="alternate"
+      >
+        <img src="/assets/globe.svg" loading="eager" alt="" class="lang-switch-icon" />
+        <span>{t(lang, "langName")}</span>
+      </a>
+    </div>
+
+    <div
+      class="navbar-icon-button w-nav-button"
+      style="-webkit-user-select: text;"
+      aria-label="menu"
+      role="button"
+      tabindex="0"
+    >
+      <img
+        src="/assets/menu.svg"
+        loading="eager"
+        alt=""
+        class="navbar-icon"
+      />
+    </div>
+  </div>
+
+  <script>
+    import { setupNav } from "../scripts/nav.js";
+
+    let cleanup;
+    document.addEventListener("astro:page-load", () => {
+      if (cleanup) cleanup();
+      cleanup = setupNav();
+    });
+
+    document.addEventListener("astro:before-swap", () => {
+      if (cleanup) cleanup();
+    });
+  </script>
+</aside>

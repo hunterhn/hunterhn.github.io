@@ -1,0 +1,91 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { psychology } from "../data/content";
+import type { Lang } from "../i18n/ui";
+import { t } from "../i18n/ui";
+import { localizePath } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props as Props;
+const title = `${t(lang, "section.psychology")} | Dennis García`;
+---
+
+<PageLayout lang={lang} selectedItem="psychology" title={title}>
+  <div class="back-nav-container">
+    <a href={localizePath("/", lang)} class="back-nav-button w-inline-block">
+      <img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+      <div>{t(lang, "back")}</div>
+    </a>
+  </div>
+
+  <div class="content-container">
+    <h1>{t(lang, "section.psychology")}</h1>
+    <p class="category-intro">{psychology.intro[lang]}</p>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, "section.psychAreas")}</h2>
+    <div class="chips-container">
+      {psychology.areas.map((area) => <div class="single-chip">{area[lang]}</div>)}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, "section.psychAssessment")}</h2>
+    <div class="chips-container">
+      {psychology.assessment.map((item) => <div class="single-chip small-chip">{item[lang]}</div>)}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, "section.psychApproaches")}</h2>
+    <div class="edu-grid">
+      {
+        psychology.approaches.map((item) => (
+          <article class="edu-card">
+            <h4>{item.name[lang]}</h4>
+            <p class="edu-detail">{item.strength[lang]}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, "section.psychResearch")}</h2>
+    <div class="edu-grid">
+      {
+        psychology.research.map((item) => (
+          <article class="edu-card">
+            <h4>{item.title[lang]}</h4>
+            <p class="edu-detail">{item.desc[lang]}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, "section.psychProjects")}</h2>
+    <div class="edu-grid">
+      {
+        psychology.projects.map((item) => (
+          <article class="edu-card">
+            <h4>{item.title[lang]}</h4>
+            <p class="edu-detail">{item.desc[lang]}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, "section.psychFrameworks")}</h2>
+    <div class="chips-container">
+      {psychology.frameworks.map((item) => <div class="single-chip small-chip">{item}</div>)}
+    </div>
+  </section>
+</PageLayout>

@@ -1,0 +1,153 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import {
+  experience,
+  complementaryExperience,
+  volunteering,
+  contact,
+} from "../data/content";
+import type { Lang } from "../i18n/ui";
+import { t } from "../i18n/ui";
+import { localizePath } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props as Props;
+const title = `${t(lang, "section.experience")} | Dennis García`;
+const contactLinks: { label: string; href: string; emailB64?: string }[] = [
+  { label: "garcia.dennis [at] gmail [dot] com", href: "#", emailB64: "Z2FyY2lhLmRlbm5pc0BnbWFpbC5jb20=" },
+  { label: "GitHub", href: contact.github },
+  { label: "LinkedIn", href: contact.linkedin },
+  { label: "Wikimedia Commons", href: contact.commons },
+  { label: "dennisgarcia.dev", href: contact.website },
+];
+---
+
+<PageLayout lang={lang} selectedItem="experience" title={title}>
+  <div class="back-nav-container">
+    <a href={localizePath("/", lang)} class="back-nav-button w-inline-block">
+      <img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+      <div>{t(lang, "back")}</div>
+    </a>
+  </div>
+
+  <div class="content-container">
+    <h1>{t(lang, "section.experience")}</h1>
+    <div class="timeline">
+      {
+        experience.map((job) => (
+          <article class="timeline-item">
+            <div class="timeline-head">
+              <span class="timeline-role">{job.role[lang]}</span>
+              <span class="timeline-company">{job.company}</span>
+            </div>
+            <div class="timeline-meta">
+              {job.period[lang]}
+              {job.location ? ` · ${job.location[lang]}` : ""}
+            </div>
+            {job.bullets && (
+              <ul class="timeline-bullets" role="list">
+                {job.bullets[lang].map((bullet) => <li>{bullet}</li>)}
+              </ul>
+            )}
+            {job.tech && (
+              <div class="chips-container">
+                {job.tech.map((item) => (
+                  <div class="single-chip small-chip">{item}</div>
+                ))}
+              </div>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, "section.complementaryExperience")}</h2>
+    <div class="timeline">
+      {
+        complementaryExperience.map((job) => (
+          <article class="timeline-item">
+            <div class="timeline-head">
+              <span class="timeline-role">{job.role[lang]}</span>
+              <span class="timeline-company">{job.company}</span>
+            </div>
+            <div class="timeline-meta">
+              {job.period[lang]}
+              {job.location ? ` · ${job.location[lang]}` : ""}
+            </div>
+            {job.bullets && (
+              <ul class="timeline-bullets" role="list">
+                {job.bullets[lang].map((bullet) => <li>{bullet}</li>)}
+              </ul>
+            )}
+            {job.link && (
+              <a
+                href={job.link}
+                class="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {job.link}
+              </a>
+            )}
+            {job.tech && (
+              <div class="chips-container">
+                {job.tech.map((item) => (
+                  <div class="single-chip small-chip">{item}</div>
+                ))}
+              </div>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, "section.volunteering")}</h2>
+    <div class="timeline">
+      {
+        volunteering.map((item) => (
+          <article class="timeline-item">
+            <div class="timeline-head">
+              <span class="timeline-role">{item.role[lang]}</span>
+              <span class="timeline-company">{item.org}</span>
+            </div>
+            <div class="timeline-meta">
+              {item.period[lang]}
+              {item.location ? ` · ${item.location[lang]}` : ""}
+            </div>
+            {item.bullets && (
+              <ul class="timeline-bullets" role="list">
+                {item.bullets[lang].map((bullet) => <li>{bullet}</li>)}
+              </ul>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, "section.contact")}</h2>
+    <div class="contact-links">
+      {
+        contactLinks.map((link) => (
+          <a
+            href={link.emailB64 ? "#" : link.href}
+            data-email={link.emailB64}
+            class="contact-link"
+            target={link.emailB64 ? undefined : "_blank"}
+            rel={link.emailB64 ? undefined : "noopener noreferrer"}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</PageLayout>
