@@ -939,3 +939,33 @@ p {
     line-height: 44px;
   }
 }
+
+/* Brand logo in sidebar */
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  float: none;
+}
+
+.brand-logo {
+  display: block;
+  width: 100%;
+  max-width: 190px;
+  height: auto;
+}
+
+.brand-role {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .brand-logo {
+    max-width: 150px;
+  }
+
+  .brand-role {
+    display: none;
+  }
+}

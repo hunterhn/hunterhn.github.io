@@ -24,19 +24,14 @@ const altPath = switchLangPath(Astro.url.pathname, altLang);
   class="sidebar w-nav"
 >
   <div class="nav-content">
-    <a href={localizePath("/", lang)} class="w-nav-brand" aria-label="home">
-      <div class="niv-data">
-        <img
-          src="/assets/avatar.svg"
-          loading="eager"
-          alt={`${profile.name} avatar`}
-          class="niv-image"
-        />
-        <div>
-          <div class="label-white">{profile.name}</div>
-          <div class="label-gray">{profile.role[lang]}</div>
-        </div>
-      </div>
+    <a href={localizePath("/", lang)} class="w-nav-brand brand" aria-label="home">
+      <img
+        src="/assets/dennis-logo-white.png"
+        loading="eager"
+        alt={`${profile.name} — ${profile.role[lang]}`}
+        class="brand-logo"
+      />
+      <div class="label-gray brand-role">{profile.role[lang]}</div>
     </a>
 
     <nav role="navigation" class="w-nav-menu">
