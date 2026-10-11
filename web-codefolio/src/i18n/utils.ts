@@ -10,10 +10,19 @@ export function normalizePath(path: string): string {
   return clean ? `/${clean}` : "/";
 }
 
+function withTrailingSlash(path: string): string {
+  return path === "/" ? "/" : `${path.replace(/\/+$/, "")}/`;
+}
+
 export function localizePath(path: string, lang: Lang): string {
   const normalized = normalizePath(path);
-  if (lang === defaultLang) return normalized;
-  return normalized === "/" ? "/en" : `/en${normalized}`;
+  const base =
+    lang === defaultLang
+      ? normalized
+      : normalized === "/"
+        ? "/en"
+        : `/en${normalized}`;
+  return withTrailingSlash(base);
 }
 
 export function switchLangPath(path: string, lang: Lang): string {

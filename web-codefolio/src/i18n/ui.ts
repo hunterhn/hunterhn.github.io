@@ -8,6 +8,14 @@ export const ui = {
     "meta.title": "Dennis García — Arquitecto DevOps y Cloud",
     "meta.description":
       "Portafolio técnico de Dennis García: desarrollo de software, DevOps y cloud, seguridad y datos, e IA y automatización.",
+    "meta.experience":
+      "Trayectoria profesional de Dennis García: roles técnicos, formación, certificaciones y voluntariado.",
+    "meta.education":
+      "Formación de Dennis García: ingeniería, seguridad de la información, gestión y docencia.",
+    "meta.hobbies":
+      "Aficiones de Dennis García: fotografía, senderismo, tecnología creativa, naturaleza y viajes.",
+    "meta.psychology":
+      "Formación en psicología de Dennis García: áreas de estudio, evaluación, investigación y proyectos académicos.",
     "role": "Arquitecto DevOps y Cloud",
     "contact": "Contacto",
     "back": "Volver",
@@ -43,6 +51,14 @@ export const ui = {
     "meta.title": "Dennis García — DevOps & Cloud Architect",
     "meta.description":
       "Technical portfolio of Dennis García: software development, DevOps and cloud, security and data, and AI and automation.",
+    "meta.experience":
+      "Dennis García's professional journey: technical roles, education, certifications and volunteering.",
+    "meta.education":
+      "Dennis García's education: engineering, information security, management and teaching.",
+    "meta.hobbies":
+      "Dennis García's hobbies: photography, hiking, creative tech, nature and travel.",
+    "meta.psychology":
+      "Dennis García's psychology background: study areas, assessment, research and academic projects.",
     "role": "DevOps & Cloud Architect",
     "contact": "Contact",
     "back": "Back",

@@ -13,7 +13,12 @@ const { lang } = Astro.props as Props;
 const title = `${t(lang, "section.hobbies")} | Dennis García`;
 ---
 
-<PageLayout lang={lang} selectedItem="hobbies" title={title}>
+<PageLayout
+  lang={lang}
+  selectedItem="hobbies"
+  title={title}
+  description={t(lang, "meta.hobbies")}
+>
   <div class="back-nav-container">
     <a href={localizePath("/", lang)} class="back-nav-button w-inline-block">
       <img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />

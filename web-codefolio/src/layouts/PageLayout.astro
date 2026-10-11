@@ -8,14 +8,15 @@ interface Props {
   lang: Lang;
   selectedItem: string;
   title: string;
+  description?: string;
 }
 
-const { lang, selectedItem, title } = Astro.props as Props;
+const { lang, selectedItem, title, description } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
 <html lang={lang}>
-  <Header title={title} lang={lang} />
+  <Header title={title} description={description} lang={lang} />
   <body>
     <div class="content">
       <Sidebar selectedItem={selectedItem} lang={lang} />

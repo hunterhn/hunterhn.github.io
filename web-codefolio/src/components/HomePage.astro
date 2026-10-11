@@ -68,7 +68,12 @@ const contactLinks: { label: string; href: string; emailB64?: string }[] = [
 ];
 ---
 
-<PageLayout lang={lang} selectedItem="home" title={t(lang, "meta.title")}>
+<PageLayout
+  lang={lang}
+  selectedItem="home"
+  title={t(lang, "meta.title")}
+  description={t(lang, "meta.description")}
+>
   <main class="fold-content-container">
     <div class="fold-content">
       <h1>{t(lang, "home.title1")}<br />{t(lang, "home.title2")}</h1>

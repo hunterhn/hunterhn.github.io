@@ -21,7 +21,12 @@ if (!category) {
 const title = `${category.title[lang]} | Dennis García`;
 ---
 
-<PageLayout lang={lang} selectedItem={category.key} title={title}>
+<PageLayout
+  lang={lang}
+  selectedItem={category.key}
+  title={title}
+  description={category.summary[lang]}
+>
   <div class="back-nav-container">
     <a href={localizePath("/", lang)} class="back-nav-button w-inline-block">
       <img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />

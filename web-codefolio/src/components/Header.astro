@@ -6,27 +6,51 @@ import { localizePath } from "../i18n/utils";
 
 interface HeaderProps {
   title: string;
+  description?: string;
   lang: Lang;
 }
 
-const { title, lang } = Astro.props as HeaderProps;
-const currentPath = Astro.url.pathname;
-const stripped = currentPath.replace(/^\/en(?=\/|$)/, "") || "/";
-const origin = Astro.site ? Astro.site.origin : "";
+const { title, description, lang } = Astro.props as HeaderProps;
+
+const base = Astro.site ? Astro.site.origin.replace(/\/$/, "") : "";
+const stripped = Astro.url.pathname.replace(/^\/en(?=\/|$)/, "") || "/";
+
+const canonical = `${base}${localizePath(stripped, lang)}`;
+const esUrl = `${base}${localizePath(stripped, "es")}`;
+const enUrl = `${base}${localizePath(stripped, "en")}`;
+
+const desc = description || t(lang, "meta.description");
+const ogLocale = lang === "en" ? "en_US" : "es_ES";
 ---
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>{title}</title>
-  <meta name="description" content={t(lang, "meta.description")} />
-  <meta content={title} property="og:title" />
-  <meta content={title} property="twitter:title" />
-  <meta content={t(lang, "meta.description")} property="og:description" />
+  <meta name="description" content={desc} />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Dennis García" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link rel="canonical" href={`${origin}${stripped}`} />
-  <link rel="alternate" hreflang="es" href={`${origin}${localizePath(stripped, "es")}`} />
-  <link rel="alternate" hreflang="en" href={`${origin}${localizePath(stripped, "en")}`} />
-  <link rel="alternate" hreflang="x-default" href={`${origin}${localizePath(stripped, "es")}`} />
+
+  <!-- Canonical (self-referential) + language alternates -->
+  <link rel="canonical" href={canonical} />
+  <link rel="alternate" hreflang="es" href={esUrl} />
+  <link rel="alternate" hreflang="en" href={enUrl} />
+  <link rel="alternate" hreflang="x-default" href={esUrl} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dennis García" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={desc} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:locale" content={ogLocale} />
+  <meta property="og:locale:alternate" content={lang === "en" ? "es_ES" : "en_US"} />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={desc} />
+
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <ViewTransitions />
   <link href="https://fonts.googleapis.com/" rel="preconnect" />
