@@ -985,3 +985,23 @@ p {
     display: none;
   }
 }
+
+/* Prevent white flash during Astro View Transitions */
+
+html {
+  background-color: #161616;
+  color-scheme: dark;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  background-color: #161616;
+  mix-blend-mode: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
