@@ -940,6 +940,22 @@ p {
   }
 }
 
+/* Home hero logo */
+
+.home-logo {
+  display: block;
+  width: 170px;
+  height: auto;
+  margin-bottom: 28px;
+}
+
+@media screen and (max-width: 767px) {
+  .home-logo {
+    width: 140px;
+    margin-bottom: 20px;
+  }
+}
+
 /* Brand logo in sidebar */
 
 .brand {
