@@ -3,6 +3,8 @@ import { ViewTransitions } from "astro:transitions";
 import type { Lang } from "../i18n/ui";
 import { t } from "../i18n/ui";
 import { localizePath } from "../i18n/utils";
+import JsonLd from "./JsonLd.astro";
+import { buildJsonLd } from "../data/schema";
 
 interface HeaderProps {
   title: string;
@@ -21,6 +23,13 @@ const enUrl = `${base}${localizePath(stripped, "en")}`;
 
 const desc = description || t(lang, "meta.description");
 const ogLocale = lang === "en" ? "en_US" : "es_ES";
+
+const jsonLd = buildJsonLd({
+  lang,
+  canonical,
+  isHome: stripped === "/",
+  pageTitle: title,
+});
 ---
 
 <head>
@@ -43,6 +52,8 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
   <link rel="alternate" hreflang="es" href={esUrl} />
   <link rel="alternate" hreflang="en" href={enUrl} />
   <link rel="alternate" hreflang="x-default" href={enUrl} />
+
+  <JsonLd data={jsonLd} />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
