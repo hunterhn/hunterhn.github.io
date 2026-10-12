@@ -11,11 +11,11 @@ export const ui = {
     "meta.experience":
       "Experiencia de Dennis García: roles técnicos, formación, certificaciones y voluntariado.",
     "meta.education":
-      "Formación de Dennis García: ingeniería, seguridad de la información, gestión y docencia.",
+      "Soy Dennis García y estudié ingeniería, seguridad de la información, gestión y docencia.",
     "meta.hobbies":
-      "Aficiones de Dennis García: fotografía, senderismo, tecnología creativa, naturaleza y viajes.",
+      "Soy Dennis García. Fuera del trabajo me gusta la fotografía, el senderismo, la tecnología creativa, la naturaleza y viajar.",
     "meta.psychology":
-      "Formación en psicología de Dennis García: áreas de estudio, evaluación, investigación y proyectos académicos.",
+      "Soy Dennis García y también me formé en psicología: áreas de estudio, evaluación, investigación y proyectos académicos.",
     "role": "Arquitecto DevOps y Cloud",
     "contact": "Contacto",
     "back": "Volver",
@@ -54,11 +54,11 @@ export const ui = {
     "meta.experience":
       "Dennis García's experience: technical roles, education, certifications and volunteering.",
     "meta.education":
-      "Dennis García's education: engineering, information security, management and teaching.",
+      "I'm Dennis García and I studied engineering, information security, management and teaching.",
     "meta.hobbies":
-      "Dennis García's hobbies: photography, hiking, creative tech, nature and travel.",
+      "I'm Dennis García. Outside work I like photography, hiking, creative tech, nature and travel.",
     "meta.psychology":
-      "Dennis García's psychology background: study areas, assessment, research and academic projects.",
+      "I'm Dennis García and I also studied psychology: study areas, assessment, research and academic projects.",
     "role": "DevOps & Cloud Architect",
     "contact": "Contact",
     "back": "Back",
