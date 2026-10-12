@@ -69,8 +69,8 @@ export const profile = {
   role: { es: "Arquitecto DevOps y Cloud", en: "DevOps & Cloud Architect" },
   location: { es: "Panamá, Panamá", en: "Panama City, Panama" },
   about: {
-    es: "19 años en desarrollo, administración de sistemas, bases de datos, redes, seguridad, automatización, agentic AI y cloud/DevOps, con formación en psicología aplicada al comportamiento humano.",
-    en: "19 years in development, systems administration, databases, networking, security, automation, agentic AI and cloud/DevOps, with a background in psychology applied to human behavior.",
+    es: "Llevo 19 años en esto: desarrollo, administración de sistemas, bases de datos, redes, seguridad y automatización. Con el tiempo se sumaron cloud, DevOps y los agentes de IA. También me formé en psicología, aplicada al comportamiento humano.",
+    en: "I've been at this for 19 years: development, systems administration, databases, networking, security and automation. Cloud, DevOps and AI agents came later. I also studied psychology, applied to human behavior.",
   },
 };
 
@@ -125,12 +125,12 @@ export const categories: Category[] = [
     order: 2,
     title: { es: "Desarrollo de software", en: "Software Development" },
     summary: {
-      es: "Aplicaciones web y APIs en PHP, Laravel, WordPress, Node.js y TypeScript, con foco en plataformas mantenibles.",
-      en: "Web applications and APIs in PHP, Laravel, WordPress, Node.js and TypeScript, focused on maintainable platforms.",
+      es: "Construyo aplicaciones web y APIs en PHP, Laravel, WordPress, Node.js y TypeScript. Me importa que la plataforma siga siendo mantenible.",
+      en: "I build web applications and APIs in PHP, Laravel, WordPress, Node.js and TypeScript. What matters to me is that the platform stays maintainable.",
     },
     intro: {
-      es: "Diseño y desarrollo de aplicaciones web, APIs e integraciones. Trabajo desde el modelo de dominio y la arquitectura hasta el despliegue y la operación, priorizando soluciones mantenibles y de costo razonable.",
-      en: "Design and development of web applications, APIs and integrations. I work from domain modeling and architecture through to deployment and operations, prioritizing maintainable and cost-effective solutions.",
+      es: "Diseño y desarrollo aplicaciones web, APIs e integraciones. Trabajo desde el modelo de dominio y la arquitectura hasta el despliegue y la operación. Prefiero soluciones fáciles de sostener y que no cuesten de más.",
+      en: "I design and build web applications, APIs and integrations. I work from domain modeling and architecture through to deployment and operations. I prefer solutions that stay easy to maintain and don't cost more than they should.",
     },
     chips: [
       "PHP",
@@ -152,18 +152,18 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Producto en definición: dominio, API y arquitectura cloud para apoyar el trabajo clínico y administrativo.",
-            "Modelo de datos para pacientes, casos, sesiones, notas clínicas, consentimientos y documentos.",
-            "Búsqueda semántica de expedientes y notas clínicas con PostgreSQL y pgvector.",
-            "Arquitectura contenerizada con servicios de interfaz, API y workers sobre PostgreSQL.",
-            "Evaluación de stack: TypeScript, Next.js, tRPC, TanStack Query, Zod y Tailwind CSS.",
+            "El producto todavía está en definición: estoy armando el dominio, la API y la arquitectura cloud para sostener el trabajo clínico y administrativo.",
+            "Diseñé el modelo de datos para pacientes, casos, sesiones, notas clínicas, consentimientos y documentos.",
+            "Armé una búsqueda semántica de expedientes y notas clínicas con PostgreSQL y pgvector.",
+            "Monté una arquitectura contenerizada con servicios de interfaz, API y workers sobre PostgreSQL.",
+            "Estoy evaluando el stack: TypeScript, Next.js, tRPC, TanStack Query, Zod y Tailwind CSS.",
           ],
           en: [
-            "Product under definition: domain, API and cloud architecture to support clinical and administrative work.",
-            "Data model for patients, cases, sessions, clinical notes, consents and documents.",
-            "Semantic search of records and clinical notes with PostgreSQL and pgvector.",
-            "Containerized architecture with interface, API and worker services on PostgreSQL.",
-            "Stack evaluation: TypeScript, Next.js, tRPC, TanStack Query, Zod and Tailwind CSS.",
+            "The product is still being defined: I'm working out the domain, the API and the cloud architecture to support clinical and administrative work.",
+            "I designed the data model for patients, cases, sessions, clinical notes, consents and documents.",
+            "I built semantic search of records and clinical notes with PostgreSQL and pgvector.",
+            "I set up a containerized architecture with interface, API and worker services on PostgreSQL.",
+            "I'm evaluating the stack: TypeScript, Next.js, tRPC, TanStack Query, Zod and Tailwind CSS.",
           ],
         },
         tech: [
@@ -186,16 +186,16 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Arquitectura, despliegue y diagnóstico de aplicaciones PHP sobre Google Cloud Run.",
-            "Configuración y ajuste de Nginx, Apache y PHP-FPM en contenedores, incluyendo versiones heredadas de PHP.",
-            "Resolución de problemas de autenticación y encabezados entre Cloud Run, IAP y Cloudflare.",
-            "Optimización de tareas programadas de Laravel y procesos de larga duración.",
+            "Diseñé, desplegué y diagnostiqué aplicaciones PHP sobre Google Cloud Run.",
+            "Configuré y ajusté Nginx, Apache y PHP-FPM en contenedores, incluidas versiones heredadas de PHP.",
+            "Resolví problemas de autenticación y encabezados entre Cloud Run, IAP y Cloudflare.",
+            "Optimicé tareas programadas de Laravel y procesos de larga duración.",
           ],
           en: [
-            "Architecture, deployment and troubleshooting of PHP applications on Google Cloud Run.",
-            "Configuration and tuning of Nginx, Apache and PHP-FPM in containers, including legacy PHP versions.",
-            "Resolution of authentication and header issues between Cloud Run, IAP and Cloudflare.",
-            "Optimization of Laravel scheduled tasks and long-running processes.",
+            "I designed, deployed and troubleshot PHP applications on Google Cloud Run.",
+            "I configured and tuned Nginx, Apache and PHP-FPM in containers, including legacy PHP versions.",
+            "I fixed authentication and header issues between Cloud Run, IAP and Cloudflare.",
+            "I optimized Laravel scheduled tasks and long-running processes.",
           ],
         },
         tech: [
@@ -217,12 +217,12 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Integración de aplicaciones Node.js con buckets de imágenes en Google Cloud Storage.",
-            "Diagnóstico de permisos, secretos y variables de entorno para servicios Cloud Run y Vertex AI.",
+            "Integré aplicaciones Node.js con buckets de imágenes en Google Cloud Storage.",
+            "Diagnostiqué permisos, secretos y variables de entorno para servicios Cloud Run y Vertex AI.",
           ],
           en: [
-            "Integration of Node.js applications with image buckets on Google Cloud Storage.",
-            "Diagnosis of permissions, secrets and environment variables for Cloud Run and Vertex AI services.",
+            "I integrated Node.js applications with image buckets on Google Cloud Storage.",
+            "I diagnosed permissions, secrets and environment variables for Cloud Run and Vertex AI services.",
           ],
         },
         tech: ["Node.js", "TypeScript", "Cloud Storage", "Cloud Run", "Vertex AI"],
@@ -234,12 +234,12 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Implementación de la plataforma Moodle para pruebas diagnósticas, formativas y de fin de grado en centros educativos públicos (proyecto MIDEH, Honduras).",
-            "Diseño de una distribución offline para centros educativos sin conexión a Internet.",
+            "Implementé la plataforma Moodle para pruebas diagnósticas, formativas y de fin de grado en centros educativos públicos (proyecto MIDEH, Honduras).",
+            "Diseñé una distribución offline para centros educativos sin conexión a Internet.",
           ],
           en: [
-            "Implementation of the Moodle platform for diagnostic, formative and end-of-grade tests in public schools (MIDEH project, Honduras).",
-            "Design of an offline distribution for schools without Internet access.",
+            "I implemented the Moodle platform for diagnostic, formative and end-of-grade tests in public schools (MIDEH project, Honduras).",
+            "I designed an offline distribution for schools without Internet access.",
           ],
         },
         tech: ["Moodle", "PHP", "MySQL", "Linux"],
@@ -251,14 +251,14 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Análisis y diseño de procesos para carga de datos, cobranzas e interfaces con el sistema central AS400.",
-            "Desarrollo de servidores basados en sockets, WebServices y automatización de procesos.",
-            "Interfaces de conexión con Asterisk, IVR y dispositivos de lectura de tarjetas de crédito.",
+            "Analicé y diseñé procesos para carga de datos, cobranzas e interfaces con el sistema central AS400.",
+            "Desarrollé servidores basados en sockets y WebServices, además de automatizar procesos.",
+            "Conecté interfaces con Asterisk, IVR y dispositivos de lectura de tarjetas de crédito.",
           ],
           en: [
-            "Analysis and design of processes for data loading, collections and interfaces with the AS400 core system.",
-            "Development of socket-based servers, WebServices and process automation.",
-            "Integration interfaces with Asterisk, IVR and credit card reading devices.",
+            "I analyzed and designed processes for data loading, collections and interfaces with the AS400 core system.",
+            "I built socket-based servers and WebServices, and automated processes.",
+            "I connected interfaces with Asterisk, IVR and credit card reading devices.",
           ],
         },
         tech: [".NET", "C#", "MSSQL", "MySQL", "Ruby", "PHP", "Apache", "Asterisk"],
@@ -271,12 +271,12 @@ export const categories: Category[] = [
     order: 1,
     title: { es: "DevOps y Cloud", en: "DevOps & Cloud" },
     summary: {
-      es: "Infraestructura como código, contenedores y CI/CD en Google Cloud y AWS, con foco en operación y confiabilidad.",
-      en: "Infrastructure as code, containers and CI/CD on Google Cloud and AWS, focused on operations and reliability.",
+      es: "Escribo infraestructura como código, trabajo con contenedores y armo pipelines de CI/CD en Google Cloud y AWS. Mi foco está en que la operación sea confiable.",
+      en: "I write infrastructure as code, work with containers and build CI/CD pipelines on Google Cloud and AWS. My focus is keeping operations reliable.",
     },
     intro: {
-      es: "Construyo y opero infraestructura reproducible en Google Cloud y AWS. Automatizo despliegues, contenedores y entornos, y me enfoco en la observabilidad y el diagnóstico de incidentes complejos.",
-      en: "I build and operate reproducible infrastructure on Google Cloud and AWS. I automate deployments, containers and environments, with a focus on observability and diagnosing complex incidents.",
+      es: "Construyo infraestructura reproducible en Google Cloud y AWS y la opero en producción. Los despliegues, contenedores y entornos quedan automatizados. Buena parte de mi atención se va en la observabilidad y en los incidentes que no se explican solos.",
+      en: "I build reproducible infrastructure on Google Cloud and AWS and then live with it in production. I automate deployments, containers and environments; most of my attention goes to observability and to the incidents that don't explain themselves.",
     },
     chips: [
       "Terraform",
@@ -298,12 +298,12 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Diseño y mantenimiento de infraestructura en GCP y AWS con Terraform y Terraform Cloud.",
-            "Definición de infraestructura reproducible y gestión de entornos.",
+            "Diseño y mantengo infraestructura en GCP y AWS con Terraform y Terraform Cloud.",
+            "Defino infraestructura reproducible y gestiono los entornos.",
           ],
           en: [
-            "Design and maintenance of GCP and AWS infrastructure with Terraform and Terraform Cloud.",
-            "Definition of reproducible infrastructure and environment management.",
+            "I design and maintain GCP and AWS infrastructure with Terraform and Terraform Cloud.",
+            "I define reproducible infrastructure and manage environments.",
           ],
         },
         tech: ["Terraform", "Terraform Cloud", "GCP", "AWS", "Linux"],
@@ -315,12 +315,12 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Despliegue y operación de cargas en Kubernetes y Amazon EKS.",
-            "Gestión de releases con Helm y empaquetado de servicios en contenedores Docker.",
+            "Despliego y opero cargas en Kubernetes y Amazon EKS.",
+            "Gestiono releases con Helm y empaqueto servicios en contenedores Docker.",
           ],
           en: [
-            "Deployment and operation of workloads on Kubernetes and Amazon EKS.",
-            "Release management with Helm and packaging of services in Docker containers.",
+            "I deploy and operate workloads on Kubernetes and Amazon EKS.",
+            "I manage releases with Helm and package services in Docker containers.",
           ],
         },
         tech: ["Kubernetes", "Helm", "Amazon EKS", "Docker", "Amazon EC2"],
@@ -329,14 +329,14 @@ export const categories: Category[] = [
         title: { es: "CI/CD con CircleCI", en: "CI/CD with CircleCI" },
         desc: {
           es: [
-            "Implementación y ajuste de pipelines de CircleCI.",
-            "Compatibilidad de herramientas de calidad con versiones heredadas de PHP.",
-            "Automatización de despliegues sobre contenedores.",
+            "Implementé y ajusté pipelines de CircleCI.",
+            "Hice compatibles las herramientas de calidad con versiones heredadas de PHP.",
+            "Automaticé los despliegues sobre contenedores.",
           ],
           en: [
-            "Implementation and tuning of CircleCI pipelines.",
-            "Quality tool compatibility with legacy PHP versions.",
-            "Deployment automation on containers.",
+            "I implemented and tuned CircleCI pipelines.",
+            "I made quality tools compatible with legacy PHP versions.",
+            "I automated deployments on containers.",
           ],
         },
         tech: ["CircleCI", "Docker", "PHP-CS-Fixer", "Git", "GitHub"],
@@ -345,14 +345,14 @@ export const categories: Category[] = [
         title: { es: "Observabilidad y operación", en: "Observability & operations" },
         desc: {
           es: [
-            "Supervisión de conexiones y métricas de bases de datos Cloud SQL / MySQL.",
-            "Recolección y análisis de registros para el diagnóstico de incidentes.",
-            "Inventario y diagramación de recursos con Cloud Asset Inventory.",
+            "Superviso conexiones y métricas de bases de datos Cloud SQL / MySQL.",
+            "Recojo y analizo registros para diagnosticar incidentes.",
+            "Inventario y diagramo recursos con Cloud Asset Inventory.",
           ],
           en: [
-            "Monitoring of connections and metrics for Cloud SQL / MySQL databases.",
-            "Log collection and analysis for incident diagnosis.",
-            "Resource inventory and diagramming with Cloud Asset Inventory.",
+            "I monitor connections and metrics for Cloud SQL / MySQL databases.",
+            "I collect and analyze logs to diagnose incidents.",
+            "I inventory and diagram resources with Cloud Asset Inventory.",
           ],
         },
         tech: ["Cloud SQL", "MySQL", "Cloud Logging", "Cloud Asset Inventory"],
@@ -364,12 +364,12 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Diseño de paneles de costos de GCP a partir de datos de facturación en BigQuery.",
-            "Análisis de consumo orientado al control y la optimización de costos.",
+            "Diseñé paneles de costos de GCP a partir de datos de facturación en BigQuery.",
+            "Analizo el consumo para controlar y optimizar costos.",
           ],
           en: [
-            "Design of GCP cost dashboards from billing data in BigQuery.",
-            "Consumption analysis aimed at cost control and optimization.",
+            "I designed GCP cost dashboards from billing data in BigQuery.",
+            "I analyze consumption to control and optimize costs.",
           ],
         },
         tech: ["BigQuery", "Looker", "GCP"],
@@ -381,14 +381,14 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Segmentación y reorganización de red con reducción de latencia del 35%.",
-            "Redundancia WAN con antenas AirFiber y conmutación automática por OpenVPN entre sedes.",
-            "Administración de firewalls pfSense y servicios de infraestructura local.",
+            "Segmenté y reorganicé la red, con una reducción de latencia del 35%.",
+            "Monté redundancia WAN con antenas AirFiber y conmutación automática por OpenVPN entre sedes.",
+            "Administro firewalls pfSense y servicios de infraestructura local.",
           ],
           en: [
-            "Network segmentation and reorganization with a 35% latency reduction.",
-            "WAN redundancy with AirFiber antennas and automatic OpenVPN failover between sites.",
-            "pfSense firewall administration and local infrastructure services.",
+            "I segmented and reorganized the network, with a 35% latency reduction.",
+            "I set up WAN redundancy with AirFiber antennas and automatic OpenVPN failover between sites.",
+            "I administer pfSense firewalls and local infrastructure services.",
           ],
         },
         tech: ["pfSense", "OpenVPN", "AirFiber", "Networking", "Linux"],
@@ -401,12 +401,12 @@ export const categories: Category[] = [
     order: 3,
     title: { es: "Seguridad y datos", en: "Security & Data" },
     summary: {
-      es: "Auditoría de riesgo tecnológico, seguridad de la información, operaciones de seguridad y administración de datos.",
-      en: "Technology risk auditing, information security, security operations and data administration.",
+      es: "Audito riesgo tecnológico y seguridad de la información. También llevo operaciones de seguridad y la administración de datos.",
+      en: "I audit technology risk and information security. I also handle security operations and data administration.",
     },
     intro: {
-      es: "Experiencia en auditoría de riesgo y seguridad de la información en el sector financiero. También en integración de operaciones de seguridad, administración de bases de datos relacionales y pipelines de datos.",
-      en: "Experience in technology risk and information security auditing in the financial sector, security operations integration and administration of relational databases and data pipelines.",
+      es: "Vengo de auditar riesgo y seguridad de la información en el sector financiero. También integro operaciones de seguridad, administro bases de datos relacionales y armo pipelines de datos.",
+      en: "My background is in technology risk and information security auditing in the financial sector. I also integrate security operations, run relational databases and build data pipelines.",
     },
     chips: [
       "Information Security",
@@ -427,14 +427,14 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Auditoría de cumplimiento y seguridad de la información para instituciones financieras (CNBS Honduras).",
-            "Revisión de calidad de datos, sistemas de información e informes de seguridad informática.",
-            "Pruebas de penetración, verificación de vulnerabilidades y reportes de hallazgos.",
+            "Audité cumplimiento y seguridad de la información en instituciones financieras (CNBS Honduras).",
+            "Revisé calidad de datos, sistemas de información e informes de seguridad informática.",
+            "Hice pruebas de penetración, verifiqué vulnerabilidades y redacté reportes de hallazgos.",
           ],
           en: [
-            "Compliance and information security auditing for financial institutions (CNBS Honduras).",
-            "Review of data quality, information systems and IT security reports.",
-            "Penetration testing, vulnerability verification and findings reports.",
+            "I audited compliance and information security at financial institutions (CNBS Honduras).",
+            "I reviewed data quality, information systems and IT security reports.",
+            "I ran penetration tests, verified vulnerabilities and wrote findings reports.",
           ],
         },
         tech: ["Information Security", "Pentesting", "Compliance", "Risk"],
@@ -446,12 +446,12 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Configuración de agentes y recolección de registros para Google Security Operations / Chronicle.",
-            "Ingesta de registros desde Google Workspace, Cloudflare y dispositivos o servicios de red.",
+            "Configuré agentes y recolección de registros para Google Security Operations / Chronicle.",
+            "Ingerí registros desde Google Workspace, Cloudflare y dispositivos o servicios de red.",
           ],
           en: [
-            "Agent configuration and log collection for Google Security Operations / Chronicle.",
-            "Log ingestion from Google Workspace, Cloudflare and network devices or services.",
+            "I configured agents and log collection for Google Security Operations / Chronicle.",
+            "I ingested logs from Google Workspace, Cloudflare and network devices or services.",
           ],
         },
         tech: ["Google SecOps", "Chronicle", "Cloud Logging", "Cloudflare"],
@@ -463,12 +463,12 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Administración de bases de datos MSSQL y MySQL en entornos bancarios.",
-            "Recuperación de tablas MySQL a partir de archivos .frm e .ibd tras fallas de energía (guía pública en GitHub).",
+            "Administro bases de datos MSSQL y MySQL en entornos bancarios.",
+            "Recuperé tablas MySQL a partir de archivos .frm e .ibd tras fallas de energía (guía pública en GitHub).",
           ],
           en: [
-            "Administration of MSSQL and MySQL databases in banking environments.",
-            "Recovery of MySQL tables from .frm and .ibd files after power failures (public guide on GitHub).",
+            "I administer MSSQL and MySQL databases in banking environments.",
+            "I recovered MySQL tables from .frm and .ibd files after power failures (public guide on GitHub).",
           ],
         },
         tech: ["MySQL", "MSSQL", "PostgreSQL", "Redis"],
@@ -478,12 +478,12 @@ export const categories: Category[] = [
         title: { es: "Pipelines de datos y analítica", en: "Data pipelines & analytics" },
         desc: {
           es: [
-            "Integración de Datastream en escenarios de ingesta de datos hacia BigQuery.",
-            "Modelado y consulta sobre PostgreSQL, MySQL y Redis.",
+            "Integré Datastream en escenarios de ingesta de datos hacia BigQuery.",
+            "Modelo y consulto datos sobre PostgreSQL, MySQL y Redis.",
           ],
           en: [
-            "Datastream integration in data ingestion scenarios into BigQuery.",
-            "Modeling and querying over PostgreSQL, MySQL and Redis.",
+            "I integrated Datastream in data ingestion scenarios into BigQuery.",
+            "I model and query data on PostgreSQL, MySQL and Redis.",
           ],
         },
         tech: ["BigQuery", "Datastream", "PostgreSQL", "MySQL", "Redis"],
@@ -495,12 +495,12 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Diseño de esquemas de seguridad entre capas, túneles, VPN, NAT y políticas de firewall.",
-            "Administración de ASA y conexiones con terceros.",
+            "Diseñé esquemas de seguridad entre capas, con túneles, VPN, NAT y políticas de firewall.",
+            "Administro ASA y conexiones con terceros.",
           ],
           en: [
-            "Design of layered security schemes, tunnels, VPN, NAT and firewall policies.",
-            "Administration of ASA and third-party connections.",
+            "I designed layered security schemes with tunnels, VPN, NAT and firewall policies.",
+            "I administer ASA and third-party connections.",
           ],
         },
         tech: ["Cisco ASA", "VPN", "NAT", "pfSense", "Linux"],
@@ -513,12 +513,12 @@ export const categories: Category[] = [
     order: 4,
     title: { es: "IA y automatización", en: "AI & Automation" },
     summary: {
-      es: "Asistentes con agentes delegados, automatización de flujos y procesamiento asíncrono.",
-      en: "Assistants with delegated agents, workflow automation and asynchronous processing.",
+      es: "Armo asistentes con agentes delegados, automatizo flujos y diseño procesamiento asíncrono.",
+      en: "I build assistants with delegated agents, automate workflows and design asynchronous processing.",
     },
     intro: {
-      es: "Experimento con asistentes de IA, agentes delegados y arquitecturas multi-modelo para automatizar investigación, búsqueda y flujos de trabajo técnicos. También diseño procesamiento asíncrono y experiencias interactivas.",
-      en: "I experiment with AI assistants, delegated agents and multi-model architectures to automate research, search and technical workflows. I also design asynchronous processing and interactive experiences.",
+      es: "Pruebo asistentes de IA, agentes delegados y arquitecturas multi-modelo para automatizar investigación, búsqueda y flujos de trabajo técnicos. También diseño procesamiento asíncrono y experiencias interactivas.",
+      en: "I try out AI assistants, delegated agents and multi-model architectures to automate research, search and technical workflows. I also design asynchronous processing and interactive experiences.",
     },
     chips: [
       "AI Agents",
@@ -542,16 +542,16 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Configuración de un asistente personal con agentes delegados para un briefing diario: IA, cloud y seguridad, psicología y noticias regionales.",
-            "Búsqueda y extracción de información con SearXNG y Firecrawl.",
-            "Arquitectura multi-modelo: un modelo principal y modelos de menor costo para tareas delegadas.",
-            "Perfiles de comportamiento y archivos de contexto (SOUL.md).",
+            "Configuré un asistente personal con agentes delegados para un briefing diario: IA, cloud y seguridad, psicología y noticias regionales.",
+            "Busco y extraigo información con SearXNG y Firecrawl.",
+            "Armé una arquitectura multi-modelo: un modelo principal y modelos de menor costo para las tareas delegadas.",
+            "Definí perfiles de comportamiento y archivos de contexto (SOUL.md).",
           ],
           en: [
-            "Configuration of a personal assistant with delegated agents for a daily briefing: AI, cloud and security, psychology and regional news.",
-            "Information search and extraction with SearXNG and Firecrawl.",
-            "Multi-model architecture: a main model plus lower-cost models for delegated tasks.",
-            "Behavior profiles and context files (SOUL.md).",
+            "I configured a personal assistant with delegated agents for a daily briefing: AI, cloud and security, psychology and regional news.",
+            "I search and extract information with SearXNG and Firecrawl.",
+            "I set up a multi-model architecture: a main model plus lower-cost models for delegated tasks.",
+            "I defined behavior profiles and context files (SOUL.md).",
           ],
         },
         tech: ["AI Agents", "LLM", "SearXNG", "Firecrawl", "Automation"],
@@ -563,16 +563,16 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Mini PC con Ubuntu en doble arranque. Inferencia local con Ollama y llama.cpp compilado desde fuente con soporte Vulkan.",
-            "Ajuste de aceleración GPU (ROCm/Vulkan) y configuración de inferencia en CPU para mayor estabilidad.",
-            "Hermes Agent con OpenRouter como proveedor y el agente de código Pi para tareas agentic.",
-            "Entorno de desarrollo: zsh, Ghostty, mise para Node.js y uv para Python.",
+            "Monté un mini PC con Ubuntu en doble arranque. Hago inferencia local con Ollama y llama.cpp compilado desde fuente con soporte Vulkan.",
+            "Ajusté la aceleración GPU (ROCm/Vulkan) y configuré la inferencia en CPU cuando necesito más estabilidad.",
+            "Uso Hermes Agent con OpenRouter como proveedor y el agente de código Pi para tareas agentic.",
+            "Mi entorno de desarrollo: zsh, Ghostty, mise para Node.js y uv para Python.",
           ],
           en: [
-            "Mini PC with Ubuntu in dual boot. Local inference with Ollama and llama.cpp compiled from source with Vulkan support.",
-            "GPU acceleration tuning (ROCm/Vulkan) and CPU-only inference configuration for stability.",
-            "Hermes Agent with OpenRouter as provider and the Pi coding agent for agentic tasks.",
-            "Development environment: zsh, Ghostty, mise for Node.js and uv for Python.",
+            "I set up a mini PC with Ubuntu in dual boot. I run local inference with Ollama and llama.cpp compiled from source with Vulkan support.",
+            "I tuned GPU acceleration (ROCm/Vulkan) and configured CPU-only inference when I need more stability.",
+            "I use Hermes Agent with OpenRouter as provider and the Pi coding agent for agentic tasks.",
+            "My development environment: zsh, Ghostty, mise for Node.js and uv for Python.",
           ],
         },
         tech: [
@@ -591,14 +591,14 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Diseño de instrucciones para que un modelo principal dirija agentes trabajadores en el scaffolding de proyectos.",
-            "Uso de documentación Markdown como memoria operativa y continuidad entre sesiones y modelos.",
-            "Archivos de instrucciones para agentes (AGENTS.md) y documentación de arquitectura.",
+            "Diseño las instrucciones para que un modelo principal dirija agentes trabajadores en el scaffolding de proyectos.",
+            "Uso documentación Markdown como memoria operativa y para mantener continuidad entre sesiones y modelos.",
+            "Escribo archivos de instrucciones para agentes (AGENTS.md) y documentación de arquitectura.",
           ],
           en: [
-            "Design of instructions so a main model directs worker agents in project scaffolding.",
-            "Use of Markdown documentation as operational memory and continuity across sessions and models.",
-            "Agent instruction files (AGENTS.md) and architecture documentation.",
+            "I design the instructions so a main model directs worker agents in project scaffolding.",
+            "I use Markdown documentation as operational memory and to keep continuity across sessions and models.",
+            "I write agent instruction files (AGENTS.md) and architecture documentation.",
           ],
         },
         tech: ["AI Agents", "Prompt Engineering", "Markdown", "Node.js"],
@@ -607,12 +607,12 @@ export const categories: Category[] = [
         title: { es: "Procesamiento asíncrono", en: "Asynchronous processing" },
         desc: {
           es: [
-            "Evaluación de BullMQ y Google Cloud Tasks para trabajo asíncrono.",
-            "Diseño de workers y colas para procesos de larga duración.",
+            "Evalué BullMQ y Google Cloud Tasks para trabajo asíncrono.",
+            "Diseñé workers y colas para procesos de larga duración.",
           ],
           en: [
-            "Evaluation of BullMQ and Google Cloud Tasks for asynchronous work.",
-            "Design of workers and queues for long-running processes.",
+            "I evaluated BullMQ and Google Cloud Tasks for asynchronous work.",
+            "I designed workers and queues for long-running processes.",
           ],
         },
         tech: ["BullMQ", "Google Cloud Tasks", "Redis", "Node.js"],
@@ -624,12 +624,12 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Producción de spots publicitarios y narrativa visual con Vertex AI Veo y Google Flow.",
-            "Optimización de prompts y gestión de costos y créditos de generación.",
+            "Produje spots publicitarios y narrativa visual con Vertex AI Veo y Google Flow.",
+            "Optimicé prompts y gestioné costos y créditos de generación.",
           ],
           en: [
-            "Production of advertising spots and visual narrative with Vertex AI Veo and Google Flow.",
-            "Prompt optimization and management of generation costs and credits.",
+            "I produced advertising spots and visual narrative with Vertex AI Veo and Google Flow.",
+            "I optimized prompts and managed generation costs and credits.",
           ],
         },
         tech: ["Vertex AI", "Veo", "Google Flow", "Prompt Engineering"],
@@ -641,12 +641,12 @@ export const categories: Category[] = [
         },
         desc: {
           es: [
-            "Desarrollo de experiencias audiovisuales interactivas con p5.js.",
-            "Navegación por escenas con personajes, imágenes y sonido.",
+            "Desarrollé experiencias audiovisuales interactivas con p5.js.",
+            "Armé navegación por escenas con personajes, imágenes y sonido.",
           ],
           en: [
-            "Development of interactive audiovisual experiences with p5.js.",
-            "Scene-based navigation with characters, images and sound.",
+            "I built interactive audiovisual experiences with p5.js.",
+            "I set up scene-based navigation with characters, images and sound.",
           ],
         },
         tech: ["p5.js", "JavaScript", "Creative Coding"],
