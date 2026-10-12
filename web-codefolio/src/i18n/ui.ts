@@ -5,11 +5,11 @@ export const languages: Lang[] = ["es", "en"];
 
 export const ui = {
   es: {
-    "meta.title": "Dennis García — Arquitecto DevOps y Cloud",
+    "meta.title": "Dennis García, Arquitecto DevOps y Cloud",
     "meta.description":
-      "Portafolio técnico de Dennis García: desarrollo de software, DevOps y cloud, seguridad y datos, e IA y automatización.",
+      "Portafolio de Dennis García: desarrollo de software, cloud y DevOps, seguridad y datos, e IA y automatización.",
     "meta.experience":
-      "Trayectoria profesional de Dennis García: roles técnicos, formación, certificaciones y voluntariado.",
+      "Experiencia de Dennis García: roles técnicos, formación, certificaciones y voluntariado.",
     "meta.education":
       "Formación de Dennis García: ingeniería, seguridad de la información, gestión y docencia.",
     "meta.hobbies":
@@ -23,9 +23,9 @@ export const ui = {
     "langName": "English",
     "langSwitchLabel": "Ver en inglés",
     "home.title1": "Hola, soy Dennis.",
-    "home.title2": "Diseño, construyo y opero sistemas cloud.",
+    "home.title2": "Diseño y construyo sistemas cloud, y los opero en producción.",
     "home.lead":
-      "Arquitecto DevOps y de Cloud con 19 años de experiencia en desarrollo, administración de sistemas, bases de datos, redes, seguridad, automatización y agentic AI. Construyo plataformas y las opero en producción. Aplico también la psicología para comprender el comportamiento humano detrás de la tecnología.",
+      "Llevo 19 años construyendo y operando sistemas: desarrollo, servidores, bases de datos, redes, seguridad y automatización. Hoy paso la mayor parte del tiempo con cloud, DevOps y agentes de IA. También estudié psicología y la uso para entender qué pasa del lado humano de la tecnología.",
     "home.areas": "Áreas",
     "section.experience": "Experiencia",
     "section.education": "Formación",
@@ -44,15 +44,15 @@ export const ui = {
     "section.volunteering": "Voluntariado",
     "section.contact": "Contacto",
     "hobbies.intro":
-      "Fuera del trabajo técnico: exploración, creatividad y aprendizaje continuo.",
+      "Fuera del trabajo técnico me gusta explorar, crear cosas y seguir aprendiendo.",
     "present": "Presente",
   },
   en: {
-    "meta.title": "Dennis García — DevOps & Cloud Architect",
+    "meta.title": "Dennis García, DevOps & Cloud Architect",
     "meta.description":
-      "Technical portfolio of Dennis García: software development, DevOps and cloud, security and data, and AI and automation.",
+      "Dennis García's portfolio: software development, cloud and DevOps, security and data, and AI and automation.",
     "meta.experience":
-      "Dennis García's professional journey: technical roles, education, certifications and volunteering.",
+      "Dennis García's experience: technical roles, education, certifications and volunteering.",
     "meta.education":
       "Dennis García's education: engineering, information security, management and teaching.",
     "meta.hobbies":
@@ -66,9 +66,9 @@ export const ui = {
     "langName": "Español",
     "langSwitchLabel": "View in Spanish",
     "home.title1": "Hi, I'm Dennis.",
-    "home.title2": "I design, build and operate cloud systems.",
+    "home.title2": "I design and build cloud systems, and I run them in production.",
     "home.lead":
-      "DevOps and Cloud Architect with 19 years of experience in development, systems administration, databases, networking, security, automation and agentic AI. I build platforms and operate them in production. I also apply psychology to understand the human behavior behind technology.",
+      "I've been building and running systems for 19 years: development, servers, databases, networking, security and automation. These days I spend most of my time with cloud, DevOps and AI agents. I also studied psychology, and I use it to understand what happens on the human side of technology.",
     "home.areas": "Areas",
     "section.experience": "Experience",
     "section.education": "Education",
@@ -87,7 +87,7 @@ export const ui = {
     "section.volunteering": "Volunteering",
     "section.contact": "Contact",
     "hobbies.intro":
-      "Outside technical work: exploration, creativity and continuous learning.",
+      "Outside technical work I like to explore, build things and keep learning.",
     "present": "Present",
   },
 } as const;
