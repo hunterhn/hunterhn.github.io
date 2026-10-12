@@ -1108,8 +1108,8 @@ export const education: Education[] = [
     institution: "Universidad Católica de Honduras",
     period: "2003 – 2009",
     detail: {
-      es: "Énfasis en comunicaciones (routers, redes y seguridad) y desarrollo.",
-      en: "Emphasis on communications (routers, networks and security) and development.",
+      es: "Me formé con énfasis en comunicaciones (routers, redes y seguridad) y en desarrollo.",
+      en: "I focused on communications (routers, networks and security) and on development.",
     },
   },
 ];
@@ -1124,8 +1124,8 @@ export const complementaryEducation: Education[] = [
     location: { es: "Sede de Francia", en: "France campus" },
     period: "2014",
     detail: {
-      es: "Diploma obtenido con las Felicitaciones Especiales del Jurado.",
-      en: "Diploma awarded with the Jury's Special Congratulations.",
+      es: "Terminé el diploma con las Felicitaciones Especiales del Jurado.",
+      en: "I finished the diploma with the Jury's Special Congratulations.",
     },
   },
   {
@@ -1183,29 +1183,29 @@ export const hobbies: Hobby[] = [
       en: "Creative Tech Experiments",
     },
     desc: {
-      es: "Programación creativa, experiencias interactivas, diseño de personajes y narrativa visual.",
-      en: "Creative coding, interactive experiences, character design and visual storytelling.",
+      es: "Programo por gusto: experiencias interactivas, personajes y narrativa visual. Aquí es donde pruebo ideas nuevas.",
+      en: "I code for the fun of it: interactive experiences, characters and visual storytelling. This is where I try out new ideas.",
     },
   },
   {
     title: { es: "Fotografía y video", en: "Photography & video" },
     desc: {
-      es: "Documentar lugares, personas y proyectos con cámaras Sony Mirrorless y Canon DSLR, action cams, cámaras 360 (x3/x4) y tomas aéreas con drones DJI. Más de 30 fotografías propias donadas a Wikimedia Commons, con imágenes de paisaje y aéreas de Honduras, Panamá, Perú y Paraguay (usuario Garcia.dennis).",
-      en: "Documenting places, people and projects with Sony Mirrorless and Canon DSLR cameras, action cams, 360 cameras (x3/x4) and DJI drone shots. 30+ own photographs donated to Wikimedia Commons, with landscape and aerial images of Honduras, Panama, Peru and Paraguay (user Garcia.dennis).",
+      es: "Me gusta documentar lugares, personas y proyectos. Cargo con cámaras Sony Mirrorless y Canon DSLR, action cams, cámaras 360 (x3/x4) y dron DJI para tomas aéreas. Ya doné más de 30 fotografías propias a Wikimedia Commons, sobre todo paisajes y aéreas de Honduras, Panamá, Perú y Paraguay (usuario Garcia.dennis).",
+      en: "I like documenting places, people and projects. I carry Sony Mirrorless and Canon DSLR cameras, action cams, 360 cameras (x3/x4) and a DJI drone for aerial shots. I've donated 30+ of my own photographs to Wikimedia Commons, mostly landscapes and aerials from Honduras, Panama, Peru and Paraguay (user Garcia.dennis).",
     },
   },
   {
     title: { es: "Naturaleza y símbolos", en: "Nature & symbols" },
     desc: {
-      es: "El lobo como símbolo personal: su independencia y su comportamiento en manada. Interés por los huskies y la naturaleza.",
-      en: "The wolf as a personal symbol: its independence and pack behavior. Interest in huskies and nature.",
+      es: "El lobo es mi símbolo personal: me atrae su independencia y cómo se mueve en manada. Los huskies y la naturaleza van por la misma línea.",
+      en: "The wolf is my personal symbol: I'm drawn to its independence and how it moves in a pack. Huskies and nature fall in the same line.",
     },
   },
   {
     title: { es: "Senderismo", en: "Hiking" },
     desc: {
-      es: "Rutas de montaña y naturaleza. Conquistas: Volcán Barú (Panamá), Glaciar Ventanani (Bolivia), 7 lagunas (Perú) y templos de Krabi (Tailandia).",
-      en: "Mountain and nature trails. Achievements: Volcán Barú (Panama), Ventanani Glacier (Bolivia), the 7 Lagoons (Peru) and the temples of Krabi (Thailand).",
+      es: "Camino rutas de montaña cuando puedo. Ya subí el Volcán Barú (Panamá), el Glaciar Ventanani (Bolivia), las 7 lagunas (Perú) y los templos de Krabi (Tailandia).",
+      en: "I hike mountain trails when I can. So far: Volcán Barú (Panama), Ventanani Glacier (Bolivia), the 7 Lagoons (Peru) and the temples of Krabi (Thailand).",
     },
   },
   {
@@ -1214,15 +1214,15 @@ export const hobbies: Hobby[] = [
       en: "Illustration & vector design",
     },
     desc: {
-      es: "Diseño de identidad de marca, manuales y representación vectorial técnica (SVG/EPS) con Inkscape.",
-      en: "Brand identity, brand manuals and technical vector illustration (SVG/EPS) with Inkscape.",
+      es: "Armo identidades de marca, sus manuales y dibujo vectorial técnico (SVG/EPS) con Inkscape.",
+      en: "I build brand identities, their manuals and technical vector illustration (SVG/EPS) with Inkscape.",
     },
   },
   {
     title: { es: "Viajes y exploración", en: "Travel & exploration" },
     desc: {
-      es: "Explorar culturas, investigar destinos y armar itinerarios detallados. La fotografía y el video forman parte del viaje.",
-      en: "Exploring cultures, researching destinations and building detailed itineraries. Photography and video are part of the journey.",
+      es: "Me gusta explorar culturas e investigar los destinos antes de ir. Armo itinerarios detallados, a veces de más. La cámara y el video van siempre en el viaje.",
+      en: "I like exploring cultures and researching destinations before I go. I build detailed itineraries, sometimes too detailed. The camera and video always come along.",
     },
   },
   {
@@ -1231,8 +1231,8 @@ export const hobbies: Hobby[] = [
       en: "Perfumery — The Perfume Geeks",
     },
     desc: {
-      es: "Marca de perfumería: identidad visual, dark luxury, concepto olfativo y evaluación de plataformas e-commerce (WooCommerce, Shopify, Odoo).",
-      en: "Perfumery brand: visual identity, dark luxury, scent concepts and evaluation of e-commerce platforms (WooCommerce, Shopify, Odoo).",
+      es: "Tengo una marca de perfumería: le armé la identidad visual y el concepto olfativo, con un aire dark luxury. También evalué plataformas de e-commerce (WooCommerce, Shopify, Odoo).",
+      en: "I run a perfumery brand: I built its visual identity and scent concept, with a dark luxury feel. I also evaluated e-commerce platforms (WooCommerce, Shopify, Odoo).",
     },
   },
 ];
@@ -1244,8 +1244,8 @@ export interface PsychItem {
 
 export const psychology = {
   intro: {
-    es: "Licenciado en Psicología (B.A.) por la Universidad Interamericana de Panamá (UIP), con énfasis clínico, educativo y organizacional. Aplico esta base al ámbito tecnológico y a la interacción entre tecnología, IA y comportamiento humano.",
-    en: "B.A. in Psychology from Universidad Interamericana de Panamá (UIP), with a clinical, educational and organizational emphasis. I apply this foundation to technology and to the intersection of tech, AI and human behavior.",
+    es: "Soy licenciado en Psicología (B.A.) por la Universidad Interamericana de Panamá (UIP), con énfasis clínico, educativo y organizacional. Aplico esa base a la tecnología y a cómo se cruzan la IA y el comportamiento humano.",
+    en: "I hold a B.A. in Psychology from Universidad Interamericana de Panamá (UIP), with a clinical, educational and organizational emphasis. I apply that foundation to technology and to how AI and human behavior intersect.",
   } as L,
   areas: [
     { es: "Psicología clínica", en: "Clinical psychology" },
@@ -1289,8 +1289,8 @@ export const psychology = {
         en: "Cognitive-Behavioral Therapy (CBT)",
       },
       strength: {
-        es: "Basada en evidencia, estructurada y orientada a objetivos. Eficaz para ansiedad, depresión y problemas de conducta, con resultados medibles.",
-        en: "Evidence-based, structured and goal-oriented. Effective for anxiety, depression and behavioral problems, with measurable outcomes.",
+        es: "Es la que más uso cuando busco resultados medibles. Trabaja con objetivos claros y tareas entre sesiones, y tiene buena evidencia detrás para ansiedad, depresión y problemas de conducta.",
+        en: "It's the one I reach for most when I want measurable results. It works with clear goals and between-session tasks, and the evidence backs it for anxiety, depression and behavioral problems.",
       },
     },
     {
@@ -1299,8 +1299,8 @@ export const psychology = {
         en: "Acceptance and Commitment Therapy (ACT)",
       },
       strength: {
-        es: "Desarrolla flexibilidad psicológica y acciones alineadas con valores. Útil para el manejo del sufrimiento y de problemáticas crónicas.",
-        en: "Develops psychological flexibility and values-aligned action. Useful for coping with suffering and chronic issues.",
+        es: "Trabaja la flexibilidad psicológica y las acciones alineadas con mis valores. La uso cuando el sufrimiento es parte del día a día o cuando el problema se vuelve crónico.",
+        en: "It works on psychological flexibility and actions aligned with your values. I use it when suffering is part of daily life or when the problem turns chronic.",
       },
     },
   ] as { name: L; strength: L }[],
@@ -1323,8 +1323,8 @@ export const psychology = {
         en: "Visual-spatial methodology and academic performance",
       },
       desc: {
-        es: "UIP, segundo cuatrimestre 2024. Taller visual-espacial con realidad aumentada sobre lóbulos cerebrales en 25 estudiantes de ciencias de la salud. Pretest 3.32 → postest 4.16 (t = -3.56, p = 0.0016). 12 participantes reportaron que la RA ayudó a vincular el libro con partes del cuerpo.",
-        en: "UIP, second term 2024. Visual-spatial workshop with augmented reality on brain lobes with 25 health sciences students. Pretest 3.32 → posttest 4.16 (t = -3.56, p = 0.0016). 12 participants reported that AR helped link the book with body parts.",
+        es: "Para mi investigación en la UIP (segundo cuatrimestre de 2024) armé un taller visual-espacial con realidad aumentada sobre lóbulos cerebrales. Lo probé con 25 estudiantes de ciencias de la salud: el pretest quedó en 3.32, el postest subió a 4.16 (t = -3.56, p = 0.0016). 12 participantes reportaron que la RA los ayudó a vincular el libro con partes del cuerpo.",
+        en: "For my research at UIP (second term 2024) I put together a visual-spatial workshop with augmented reality on brain lobes. I ran it with 25 health sciences students: pretest was 3.32, posttest rose to 4.16 (t = -3.56, p = 0.0016). 12 participants reported that AR helped them link the book with body parts.",
       },
     },
     {
@@ -1333,8 +1333,8 @@ export const psychology = {
         en: "SENACYT proposal: AI chatbot for adolescents",
       },
       desc: {
-        es: "Propuesta de investigación para un chatbot basado en IA dirigido a adolescentes.",
-        en: "Research proposal for an AI-based chatbot aimed at adolescents.",
+        es: "Escribí la propuesta para un chatbot con IA dirigido a adolescentes. Quedó en fase de propuesta, pero es el tipo de cruce entre psicología y tecnología que me interesa.",
+        en: "I wrote the proposal for an AI chatbot aimed at adolescents. It stayed at the proposal stage, but it's the kind of crossover between psychology and technology that interests me.",
       },
     },
   ] as PsychItem[],
@@ -1345,8 +1345,8 @@ export const psychology = {
         en: "Field practice — Fundación Tu Carrera",
       },
       desc: {
-        es: "Liderazgo de un equipo de práctica universitaria en una organización panameña de orientación vocacional.",
-        en: "Led a university practice team at a Panamanian vocational guidance organization.",
+        es: "Lideré un equipo de práctica universitaria en una organización panameña de orientación vocacional.",
+        en: "I led a university practice team at a Panamanian vocational guidance organization.",
       },
     },
     {
@@ -1355,8 +1355,8 @@ export const psychology = {
         en: "BRÚJULA Program — Scouts de Panamá",
       },
       desc: {
-        es: "Propuesta formal de intervención para el bienestar de voluntarios dentro del programa.",
-        en: "Formal intervention proposal for the well-being of volunteers within the program.",
+        es: "Armé una propuesta formal de intervención para cuidar el bienestar de los voluntarios del programa.",
+        en: "I put together a formal intervention proposal to look after the well-being of the program's volunteers.",
       },
     },
     {
@@ -1365,8 +1365,8 @@ export const psychology = {
         en: "Educational Intervention Plan (PEI)",
       },
       desc: {
-        es: "Diseño de un plan de intervención educativo estructurado con la Taxonomía de Bloom.",
-        en: "Design of an educational intervention plan structured with Bloom's Taxonomy.",
+        es: "Diseñé un plan de intervención educativo y lo estructuré con la Taxonomía de Bloom.",
+        en: "I designed an educational intervention plan and structured it with Bloom's Taxonomy.",
       },
     },
     {
@@ -1375,15 +1375,15 @@ export const psychology = {
         en: "Corporate psychology & workplace well-being",
       },
       desc: {
-        es: "Presentación sobre bienestar laboral con actividad en vivo. Análisis de liderazgo y cultura organizacional desde RRHH.",
-        en: "Presentation on workplace well-being with a live activity. Analysis of leadership and organizational culture from an HR perspective.",
+        es: "Di una presentación sobre bienestar laboral con una actividad en vivo. También armé un análisis de liderazgo y cultura organizacional desde RRHH.",
+        en: "I gave a presentation on workplace well-being with a live activity. I also worked through an analysis of leadership and organizational culture from an HR angle.",
       },
     },
     {
       title: { es: "Match Seguro", en: "Match Seguro" },
       desc: {
-        es: "Campaña de salud comunitaria en Panamá (prevención del VIH): guion y concepto visual.",
-        en: "Community health campaign in Panama (HIV prevention): script and visual concept.",
+        es: "Para una campaña de salud comunitaria en Panamá sobre prevención del VIH, escribí el guion y armé el concepto visual.",
+        en: "For a community health campaign in Panama on HIV prevention, I wrote the script and built the visual concept.",
       },
     },
   ] as PsychItem[],
