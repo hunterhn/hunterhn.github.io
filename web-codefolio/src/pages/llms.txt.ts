@@ -60,11 +60,11 @@ export const GET: APIRoute = () => {
 
 > ${profile.about.en}
 
-${profile.name} is a ${profile.role.en} based in ${profile.location.en}. This is his bilingual (Spanish/English) personal portfolio.
+${profile.name} is a ${profile.role.en} based in ${profile.location.en}. He works with remote clients in the USA, Honduras and Colombia. This is his bilingual (Spanish/English) personal portfolio.
 
 ## Site
-- Spanish (default): ${BASE}/
-- English: ${BASE}/en/
+- English (default): ${BASE}/
+- Spanish: ${BASE}/es/
 - Sitemap: ${BASE}/sitemap-index.xml
 
 ## Contact

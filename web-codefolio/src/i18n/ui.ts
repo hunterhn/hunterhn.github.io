@@ -5,9 +5,9 @@ export const languages: Lang[] = ["es", "en"];
 
 export const ui = {
   es: {
-    "meta.title": "Dennis García, Arquitecto DevOps y Cloud",
+    "meta.title": "Dennis García | Arquitecto DevOps y Cloud en Panamá",
     "meta.description":
-      "Portafolio de Dennis García: desarrollo de software, cloud y DevOps, seguridad y datos, e IA y automatización.",
+      "Arquitecto DevOps y cloud radicado en Panamá. Construyo y opero sistemas cloud, CI/CD e infraestructura como código para clientes remotos en EE. UU., Honduras y Colombia.",
     "meta.experience":
       "Experiencia de Dennis García: roles técnicos, formación, certificaciones y voluntariado.",
     "meta.education":
@@ -48,9 +48,9 @@ export const ui = {
     "present": "Presente",
   },
   en: {
-    "meta.title": "Dennis García, DevOps & Cloud Architect",
+    "meta.title": "Dennis García | DevOps & Cloud Architect in Panama",
     "meta.description":
-      "Dennis García's portfolio: software development, cloud and DevOps, security and data, and AI and automation.",
+      "DevOps and cloud architect based in Panama. I build and run cloud systems, CI/CD pipelines and infrastructure as code for remote clients in the USA, Honduras and Colombia.",
     "meta.experience":
       "Dennis García's experience: technical roles, education, certifications and volunteering.",
     "meta.education":
