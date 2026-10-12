@@ -21,8 +21,8 @@ const { page } = Astro.params;
 const isCategory = categories.some((category) => category.key === page);
 ---
 
-{page === "experience" && <ExperiencePage lang="en" />}
-{page === "education" && <EducationPage lang="en" />}
-{page === "hobbies" && <HobbiesPage lang="en" />}
-{page === "psychology" && <PsychologyPage lang="en" />}
-{isCategory && <CategoryPage lang="en" page={page!} />}
+{page === "experience" && <ExperiencePage lang="es" />}
+{page === "education" && <EducationPage lang="es" />}
+{page === "hobbies" && <HobbiesPage lang="es" />}
+{page === "psychology" && <PsychologyPage lang="es" />}
+{isCategory && <CategoryPage lang="es" page={page!} />}
