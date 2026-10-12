@@ -1,6 +1,6 @@
 export type Lang = "es" | "en";
 
-export const defaultLang: Lang = "es";
+export const defaultLang: Lang = "en";
 export const languages: Lang[] = ["es", "en"];
 
 export const ui = {
