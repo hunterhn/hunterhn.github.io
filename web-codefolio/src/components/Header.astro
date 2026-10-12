@@ -13,7 +13,7 @@ interface HeaderProps {
 const { title, description, lang } = Astro.props as HeaderProps;
 
 const base = Astro.site ? Astro.site.origin.replace(/\/$/, "") : "";
-const stripped = Astro.url.pathname.replace(/^\/en(?=\/|$)/, "") || "/";
+const stripped = Astro.url.pathname.replace(/^\/es(?=\/|$)/, "") || "/";
 
 const canonical = `${base}${localizePath(stripped, lang)}`;
 const esUrl = `${base}${localizePath(stripped, "es")}`;
@@ -42,7 +42,7 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
   <link rel="canonical" href={canonical} />
   <link rel="alternate" hreflang="es" href={esUrl} />
   <link rel="alternate" hreflang="en" href={enUrl} />
-  <link rel="alternate" hreflang="x-default" href={esUrl} />
+  <link rel="alternate" hreflang="x-default" href={enUrl} />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -87,20 +87,14 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
     (function () {
       try {
         var path = window.location.pathname;
-        var isEn = path === "/en" || path.indexOf("/en/") === 0;
+        var isEs = path === "/es" || path.indexOf("/es/") === 0;
         var stored = localStorage.getItem("lang");
-        var pref;
-        if (stored === "en" || stored === "es") {
-          pref = stored;
-        } else {
-          var nav = (navigator.language || navigator.userLanguage || "es").toLowerCase();
-          pref = nav.indexOf("en") === 0 ? "en" : "es";
-        }
+        if (stored !== "en" && stored !== "es") return;
         var target = null;
-        if (pref === "en" && !isEn) {
-          target = "/en" + (path === "/" ? "/" : path);
-        } else if (pref === "es" && isEn) {
-          target = path.replace(/^\/en/, "") || "/";
+        if (stored === "es" && !isEs) {
+          target = "/es" + (path === "/" ? "/" : path);
+        } else if (stored === "en" && isEs) {
+          target = path.replace(/^\/es/, "") || "/";
         }
         if (target && target !== path) {
           window.location.replace(target);
