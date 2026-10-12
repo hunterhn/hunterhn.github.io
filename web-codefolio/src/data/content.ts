@@ -347,12 +347,12 @@ export const categories: Category[] = [
           es: [
             "Superviso conexiones y métricas de bases de datos Cloud SQL / MySQL.",
             "Recojo y analizo registros para diagnosticar incidentes.",
-            "Inventario y diagramo recursos con Cloud Asset Inventory.",
+            "Llevo el inventario de recursos y los diagramo con Cloud Asset Inventory.",
           ],
           en: [
             "I monitor connections and metrics for Cloud SQL / MySQL databases.",
             "I collect and analyze logs to diagnose incidents.",
-            "I inventory and diagram resources with Cloud Asset Inventory.",
+            "I keep an inventory of resources and diagram them with Cloud Asset Inventory.",
           ],
         },
         tech: ["Cloud SQL", "MySQL", "Cloud Logging", "Cloud Asset Inventory"],
@@ -1299,8 +1299,8 @@ export const psychology = {
         en: "Acceptance and Commitment Therapy (ACT)",
       },
       strength: {
-        es: "Trabaja la flexibilidad psicológica y las acciones alineadas con mis valores. La uso cuando el sufrimiento es parte del día a día o cuando el problema se vuelve crónico.",
-        en: "It works on psychological flexibility and actions aligned with your values. I use it when suffering is part of daily life or when the problem turns chronic.",
+        es: "Trabaja la flexibilidad psicológica y las acciones alineadas con los propios valores. La uso cuando el sufrimiento es parte del día a día o cuando el problema se vuelve crónico.",
+        en: "It works on psychological flexibility and actions aligned with one's own values. I use it when suffering is part of daily life or when the problem turns chronic.",
       },
     },
   ] as { name: L; strength: L }[],
