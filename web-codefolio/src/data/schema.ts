@@ -42,7 +42,7 @@ export function buildJsonLd({
     "@id": WEBSITE_ID,
     url: `${SITE}/`,
     name: profile.name,
-    inLanguage: lang,
+    inLanguage: ["en", "es"],
     publisher: { "@id": PERSON_ID },
   };
 
