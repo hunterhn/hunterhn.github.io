@@ -1392,7 +1392,7 @@ export const psychology = {
 export const contact = {
   email: "garcia.dennis@gmail.com",
   github: "https://github.com/hunterhn",
-  linkedin: "https://www.linkedin.com/in/dennisgarcia",
+  linkedin: "https://www.linkedin.com/in/dennisgarciahn/",
   commons: "https://commons.wikimedia.org/wiki/User:Garcia.dennis",
   website: "https://dennisgarcia.dev",
 };
