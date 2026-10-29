@@ -17,7 +17,7 @@ import {
 const BASE = 'https://dennisgarcia.dev';
 
 function section(title: string, items: string[]): string {
-  return `## ${title}\n${items.map((i) => `- ${i}`).join('\n')}\n`;
+  return `## ${title}\n${items.join('\n')}\n`;
 }
 
 export const GET: APIRoute = () => {
