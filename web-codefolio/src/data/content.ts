@@ -1,5 +1,3 @@
-export type Lang = "es" | "en";
-
 export type L = { es: string; en: string };
 export type LList = { es: string[]; en: string[] };
 
@@ -1390,7 +1388,6 @@ export const psychology = {
 };
 
 export const contact = {
-  email: "garcia.dennis@gmail.com",
   github: "https://github.com/hunterhn",
   linkedin: "https://www.linkedin.com/in/dennisgarciahn/",
   commons: "https://commons.wikimedia.org/wiki/User:Garcia.dennis",
