@@ -26,15 +26,15 @@ export const GET: APIRoute = () => {
     .join('\n');
 
   const exp = [...experience, ...complementaryExperience]
-    .map((j) => `- **${j.role.en}** — ${j.company} (${j.period.en})`)
+    .map((j) => `- **${j.role.en}** | ${j.company} (${j.period.en})`)
     .join('\n');
 
   const edu = [...education, ...complementaryEducation]
-    .map((e) => `- **${e.title.en}** — ${e.institution} (${e.period})`)
+    .map((e) => `- **${e.title.en}** | ${e.institution} (${e.period})`)
     .join('\n');
 
   const certs = certifications
-    .map((c) => `- ${c.name} — ${c.issuer}${c.year ? ` (${c.year})` : ''}`)
+    .map((c) => `- ${c.name} | ${c.issuer}${c.year ? ` (${c.year})` : ''}`)
     .join('\n');
 
   const projects = categories
@@ -47,7 +47,7 @@ export const GET: APIRoute = () => {
     .join('\n');
 
   const volunteer = volunteering
-    .map((v) => `- **${v.role.en}** — ${v.org} (${v.period.en})`)
+    .map((v) => `- **${v.role.en}** | ${v.org} (${v.period.en})`)
     .join('\n');
 
   const hobbyList = hobbies.map((h) => `- **${h.title.en}:** ${h.desc.en}`).join('\n');
@@ -60,7 +60,7 @@ export const GET: APIRoute = () => {
 
 > ${profile.about.en}
 
-${profile.name} is a ${profile.role.en} based in ${profile.location.en}. He works with remote clients in the USA, Honduras and Colombia. This is his bilingual (Spanish/English) personal portfolio.
+${profile.name} is a ${profile.role.en} based in ${profile.location.en}. He works with remote clients in the USA, Honduras and Colombia.
 
 ## Site
 - English (default): ${BASE}/
@@ -72,7 +72,7 @@ ${profile.name} is a ${profile.role.en} based in ${profile.location.en}. He work
 - LinkedIn: ${contact.linkedin}
 - Wikimedia Commons: ${contact.commons}
 - Website: ${contact.website}
-- Contact form / email available on the site's contact section (protected against scraping).
+- Email: available in the site's contact section.
 
 ## Skills & Tools
 ${skills}
@@ -90,7 +90,7 @@ ${psych}
 ${hobbyList}
 
 ## Languages
-${languages.map((l) => `- ${l.name.en} — ${l.level.en}`).join('\n')}
+${languages.map((l) => `- ${l.name.en} | ${l.level.en}`).join('\n')}
 `;
 
   return new Response(markdown.trim() + '\n', {
