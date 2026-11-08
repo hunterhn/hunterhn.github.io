@@ -6,7 +6,7 @@
 - **Session ID**: no nativo; surrogate `20261011-2301@4869023`
 - **Working tree**: limpio (0 archivos sin commitear)
 
-> **Actualización 2026-11-08:** se eliminó `web-carrer/` (experimento no publicado), el proyecto Astro se aplanó a la raíz (`web-codefolio/` ya no existe) y el repo pasó a "all rights reserved" (ver `LICENSE`). El sitio sirve inglés en `/` y español en `/es/`. Este documento es una foto del 2026-10-11; contrasta las rutas con el código actual.
+> **Actualización 2026-11-08:** se eliminó `web-carrer/` (experimento no publicado), el proyecto Astro se aplanó a la raíz (`web-codefolio/` ya no existe), el repo pasó a "all rights reserved" (ver `LICENSE`) y se eliminó `logo/` dejando solo los assets de `public/` (el SVG de fondo se optimizó de ~110 KB a <1 KB). El sitio sirve inglés en `/` y español en `/es/`. Este documento es una foto del 2026-10-11; contrasta las rutas con el código actual.
 
 ---
 
