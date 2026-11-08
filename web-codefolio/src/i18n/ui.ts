@@ -1,7 +1,6 @@
 export type Lang = "es" | "en";
 
 export const defaultLang: Lang = "en";
-export const languages: Lang[] = ["es", "en"];
 
 export const ui = {
   es: {
@@ -11,11 +10,11 @@ export const ui = {
     "meta.experience":
       "Experiencia de Dennis García: roles técnicos, formación, certificaciones y voluntariado.",
     "meta.education":
-      "Soy Dennis García y estudié ingeniería, seguridad de la información, gestión y docencia.",
+      "Estudié ingeniería, seguridad de la información, gestión y docencia.",
     "meta.hobbies":
-      "Soy Dennis García. Fuera del trabajo me gusta la fotografía, el senderismo, la tecnología creativa, la naturaleza y viajar.",
+      "Fuera del trabajo me gusta la fotografía, el senderismo, la tecnología creativa, la naturaleza y viajar.",
     "meta.psychology":
-      "Soy Dennis García y también me formé en psicología: áreas de estudio, evaluación, investigación y proyectos académicos.",
+      "También me formé en psicología: áreas de estudio, evaluación, investigación y proyectos académicos.",
     "role": "Arquitecto DevOps y Cloud",
     "contact": "Contacto",
     "back": "Volver",
@@ -25,7 +24,7 @@ export const ui = {
     "home.title1": "Hola, soy Dennis.",
     "home.title2": "Diseño y construyo sistemas cloud, y los opero en producción.",
     "home.lead":
-      "Llevo 19 años construyendo y operando sistemas: desarrollo, servidores, bases de datos, redes, seguridad y automatización. Hoy paso la mayor parte del tiempo con cloud, DevOps y agentes de IA. También estudié psicología y la uso para entender qué pasa del lado humano de la tecnología.",
+      "Llevo 19 años construyendo y operando sistemas: desarrollo, servidores, bases de datos, redes, seguridad y automatización. Hoy trabajo sobre todo en cloud, DevOps y agentes de IA. También estudié psicología y la uso para entender qué pasa del lado humano de la tecnología.",
     "home.areas": "Áreas",
     "section.experience": "Experiencia",
     "section.education": "Formación",
@@ -54,11 +53,11 @@ export const ui = {
     "meta.experience":
       "Dennis García's experience: technical roles, education, certifications and volunteering.",
     "meta.education":
-      "I'm Dennis García and I studied engineering, information security, management and teaching.",
+      "I studied engineering, information security, management and teaching.",
     "meta.hobbies":
-      "I'm Dennis García. Outside work I like photography, hiking, creative tech, nature and travel.",
+      "Outside work I like photography, hiking, creative tech, nature and travel.",
     "meta.psychology":
-      "I'm Dennis García and I also studied psychology: study areas, assessment, research and academic projects.",
+      "I also studied psychology: study areas, assessment, research and academic projects.",
     "role": "DevOps & Cloud Architect",
     "contact": "Contact",
     "back": "Back",
@@ -68,7 +67,7 @@ export const ui = {
     "home.title1": "Hi, I'm Dennis.",
     "home.title2": "I design and build cloud systems, and I run them in production.",
     "home.lead":
-      "I've been building and running systems for 19 years: development, servers, databases, networking, security and automation. These days I spend most of my time with cloud, DevOps and AI agents. I also studied psychology, and I use it to understand what happens on the human side of technology.",
+      "I've been building and running systems for 19 years: development, servers, databases, networking, security and automation. These days most of my work is cloud, DevOps and AI agents. I also studied psychology, and I use it to understand what happens on the human side of technology.",
     "home.areas": "Areas",
     "section.experience": "Experience",
     "section.education": "Education",

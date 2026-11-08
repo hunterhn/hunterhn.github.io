@@ -1,11 +1,6 @@
 import { defaultLang, type Lang } from "./ui";
 
-export function getLangFromUrl(url: URL): Lang {
-  const [, first] = url.pathname.split("/");
-  return first === "es" ? "es" : "en";
-}
-
-export function normalizePath(path: string): string {
+function normalizePath(path: string): string {
   const clean = path.replace(/^\/+/, "").replace(/\/+$/, "");
   return clean ? `/${clean}` : "/";
 }

@@ -6,6 +6,8 @@
 - **Session ID**: no nativo; surrogate `20261011-2301@4869023`
 - **Working tree**: limpio (0 archivos sin commitear)
 
+> **Actualización 2026-11-08:** se eliminó `web-carrer/` (experimento no publicado) y el sitio ahora sirve inglés en `/` y español en `/es/`. Este documento es una foto del 2026-10-11; contrasta el routing con el código actual.
+
 ---
 
 ## 1. Qué es esto
