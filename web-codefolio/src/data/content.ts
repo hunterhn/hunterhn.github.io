@@ -127,8 +127,8 @@ export const categories: Category[] = [
       en: "I build web applications and APIs in PHP, Laravel, WordPress, Node.js and TypeScript. What matters to me is that the platform stays maintainable.",
     },
     intro: {
-      es: "Diseño y desarrollo aplicaciones web, APIs e integraciones. Trabajo desde el modelo de dominio y la arquitectura hasta el despliegue y la operación. Prefiero soluciones fáciles de sostener y que no cuesten de más.",
-      en: "I design and build web applications, APIs and integrations. I work from domain modeling and architecture through to deployment and operations. I prefer solutions that stay easy to maintain and don't cost more than they should.",
+      es: "Diseño y desarrollo aplicaciones web, APIs e integraciones. Trabajo desde el modelo de dominio y la arquitectura hasta el despliegue y la operación. Prefiero soluciones que se mantengan sin encarecerse.",
+      en: "I design and build web applications, APIs and integrations. I work from domain modeling and architecture through to deployment and operations. I prefer solutions that stay cheap to maintain.",
     },
     chips: [
       "PHP",
@@ -703,7 +703,7 @@ export const experience: Job[] = [
         "Segmenté y reorganicé la red, y reduje la latencia un 35%.",
         "Monté redundancia WAN con antenas AirFiber y conmutación automática por OpenVPN entre sedes.",
         "Lideré el desarrollo de 3 módulos satélite para el sistema legado.",
-        "Transferí el conocimiento al equipo y a los usuarios de los productos.",
+        "Capacité al equipo y a los usuarios de los productos.",
       ],
       en: [
         "I defined the new software requirements as Product Owner and led the development projects.",
@@ -711,7 +711,7 @@ export const experience: Job[] = [
         "I segmented and reorganized the network, and cut latency by 35%.",
         "I set up WAN redundancy with AirFiber antennas and automatic OpenVPN failover between sites.",
         "I led the development of 3 satellite modules for the legacy system.",
-        "I passed the knowledge on to the team and to the product users.",
+        "I trained the team and the product users.",
       ],
     },
     tech: ["VMware vSphere", "pfSense", "OpenVPN", "Elastix", "RFID", "CCTV"],
@@ -1122,8 +1122,8 @@ export const complementaryEducation: Education[] = [
     location: { es: "Sede de Francia", en: "France campus" },
     period: "2014",
     detail: {
-      es: "Terminé el diploma con las Felicitaciones Especiales del Jurado.",
-      en: "I finished the diploma with the Jury's Special Congratulations.",
+      es: "Terminé el diploma con felicitaciones especiales del jurado.",
+      en: "I completed the diploma with special congratulations from the jury.",
     },
   },
   {
@@ -1196,7 +1196,7 @@ export const hobbies: Hobby[] = [
     title: { es: "Naturaleza y símbolos", en: "Nature & symbols" },
     desc: {
       es: "El lobo es mi símbolo personal: me atrae su independencia y cómo se mueve en manada. Los huskies y la naturaleza van por la misma línea.",
-      en: "The wolf is my personal symbol: I'm drawn to its independence and how it moves in a pack. Huskies and nature fall in the same line.",
+      en: "The wolf is my personal symbol: I'm drawn to its independence and how it moves in a pack. Huskies fit the same theme.",
     },
   },
   {

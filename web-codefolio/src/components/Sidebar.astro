@@ -28,7 +28,7 @@ const altPath = switchLangPath(Astro.url.pathname, altLang);
       <img
         src="/assets/dennis-logo-white.png"
         loading="eager"
-        alt={`${profile.name} — ${profile.role[lang]}`}
+        alt={`${profile.name}, ${profile.role[lang]}`}
         class="brand-logo"
       />
       <div class="label-gray brand-role">{profile.role[lang]}</div>
