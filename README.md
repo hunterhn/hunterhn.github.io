@@ -17,7 +17,6 @@ npm run preview
 - `public/` — static assets, favicons, manifest and `CNAME`
 - `scripts/` — Open Graph image generator
 - `docs/` — handoff notes and implementation plans
-- `logo/` — source logo files, not part of the build
 
 ## License
 
